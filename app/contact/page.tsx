@@ -15,7 +15,7 @@ interface FormInputs {
 }
 
 const ContactForm: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormInputs>();
   const [showEmailInput, setShowEmailInput] = useState(false);
   const [showMessageInput, setShowMessageInput] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -26,15 +26,17 @@ const ContactForm: React.FC = () => {
       email: data.email,
       message: data.message
     };
+
     emailjs.send(
-        'service_wuhybx9',
-        'template_q9j0h9n',
+      'service_wuhybx9',
+      'template_q9j0h9n',
       emailData, 
-        'YCUm9fAeK35hme2YR'
+      'YCUm9fAeK35hme2YR'
     )
     .then(() => {
       setSubmitted(true);
       toast.success('Message sent successfully!');
+      reset();  // Reset form after successful submission
     })
     .catch(() => {
       toast.error('Error sending message. Please try again later.');
@@ -78,16 +80,15 @@ const ContactForm: React.FC = () => {
               className="mt-4"
             >
               <input
-                {...register('name', { required: true })}
+                {...register('name', { required: 'Name is required' })}
                 type="text"
                 placeholder="Your Name"
                 className="w-full p-3 bg-gray-700 border-none rounded-lg"
                 onKeyDown={(event) => handleKeyDown(event, () => setShowEmailInput(true))}
               />
-              {errors.name && <p className="text-red-500">Name is required</p>}
+              {errors.name && <p className="text-red-500">{errors.name.message}</p>}
             </motion.div>
 
-      
             {showEmailInput && (
               <>
                 <Typewriter
@@ -108,18 +109,23 @@ const ContactForm: React.FC = () => {
                   className="mt-4"
                 >
                   <input
-                    {...register('email', { required: true })}
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                        message: 'Invalid email address'
+                      }
+                    })}
                     type="email"
                     placeholder="Your Email"
                     className="w-full p-3 bg-gray-700 border-none rounded-lg"
                     onKeyDown={(event) => handleKeyDown(event, () => setShowMessageInput(true))}
                   />
-                  {errors.email && <p className="text-red-500">Email is required</p>}
+                  {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                 </motion.div>
               </>
             )}
 
-            
             {showMessageInput && (
               <>
                 <Typewriter
@@ -140,11 +146,17 @@ const ContactForm: React.FC = () => {
                   className="mt-4"
                 >
                   <textarea
-                    {...register('message', { required: true })}
+                    {...register('message', {
+                      required: 'Message is required',
+                      minLength: {
+                        value: 10,
+                        message: 'Message should be at least 10 characters long'
+                      }
+                    })}
                     placeholder="Your Message"
                     className="w-full p-3 bg-gray-700 border-none rounded-lg h-32"
                   />
-                  {errors.message && <p className="text-red-500">Message is required</p>}
+                  {errors.message && <p className="text-red-500">{errors.message.message}</p>}
                 </motion.div>
 
                 {/* Submit Button (only show after all inputs are completed) */}
