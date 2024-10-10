@@ -12,6 +12,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import WorkSection from './components/Work'
+import SkillsSection from './components/Skills'
 
 
 interface Project {
@@ -133,10 +135,12 @@ export default function Portfolio() {
 
     
         <div className="mb-12">
-          <h3 className="text-xl font-bold mb-4">//ignore this comment, mistake, keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
-          <div className="mt-8">
+          <h3 className="text-xl font-bold mb-4 mt-9 p-12">//ignore this comment, mistake, keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
+          
+          
+          <div className="mt-12">
         <h3 className="text-2xl font-bold mb-2">😂😂</h3>
-        <p className="text-xl text-gray-300">{joke}</p>
+        <p className="text-xl text-gray-300">"{joke}"</p>
       </div>
         </div>
 
@@ -180,8 +184,10 @@ export default function Portfolio() {
 </Carousel>
 
 </div>
-          
+<WorkSection />
+<SkillsSection />
         </div>
+        
 
       </div>
    
