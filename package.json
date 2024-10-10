@@ -9,16 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "emailjs-com": "^3.2.0",
+    "embla-carousel-react": "^8.3.0",
+    "framer-motion": "^11.11.7",
+    "lucide-react": "^0.451.0",
+    "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.15"
+    "react-hook-form": "^7.53.0",
+    "react-simple-typewriter": "^5.0.1",
+    "react-tilt": "^1.0.2",
+    "react-toastify": "^10.0.5",
+    "react-typewriter-effect": "^1.1.0",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/google.maps": "^3.58.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
