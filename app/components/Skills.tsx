@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
-// Sample array of tech tools with names and image URLs
+
 const skills = [
   { name: 'JavaScript', image: '/js.png' },
   { name: 'React', image: '/react.png' },
@@ -30,9 +30,10 @@ const SkillsSection: React.FC = () => {
       x: Math.random() * 400 - 200, // scatter effect on X axis
       y: Math.random() * 400 - 200, // scatter effect on Y axis
       transition: {
-        delay: i * 0.1,
+        delay: i * 0.2,
         type: 'spring',
         stiffness: 100,
+        damping: 15
       },
     }),
   };

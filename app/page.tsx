@@ -110,14 +110,14 @@ export default function Portfolio() {
         </div>
 
         {/* Profile Section */}
-        <div className="flex flex-col md:flex-row items-center mb-12">
+        <div className="flex flex-row md:flex-row items-center mb-12">
           
           <div className="md:ml-8 mt-4 md:mt-0">
             <h1 className="text-4xl font-bold mb-2">Hello,</h1>
             <h2 className="text-5xl font-bold mb-4">I'm ENIGMA.</h2>
-            <p className="text-xl text-gray-300 max-w-2xl">
-              I'm a software engineer and content writer specializing in web development, frontend infrastructure and blockchain education. My
-              passion is building stuff that makes life easier for everyone.
+            <p className="text-sm md:text-xl text-gray-300 max-w-2xl">
+              I'm a software developer specializing in web development and other frontend infrastructure, I am content writer who writes blockchain related stuff, A student food technologist who doesn't Cook!'
+               My passion is building stuff that makes life easier for everyone. I also have some interests in AI tech!
             </p>
           </div>
           <Tilt className="Tilt" options={{ max: 25, scale: 1.05 }}>
@@ -135,11 +135,11 @@ export default function Portfolio() {
 
     
         <div className="mb-12">
-          <h3 className="text-xl font-bold mb-4 mt-9 p-12">//ignore this comment, mistake, keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
+          <h3 className="text-xl font-bold mb-4 mt-9 p-12">//ignore this comment! keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
           
           
           <div className="mt-12">
-        <h3 className="text-2xl font-bold mb-2">😂😂</h3>
+        <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
         <p className="text-xl text-gray-300">"{joke}"</p>
       </div>
         </div>
@@ -184,8 +184,11 @@ export default function Portfolio() {
 </Carousel>
 
 </div>
+<div className='max-w-2xl overflow-hidden '>
 <WorkSection />
 <SkillsSection />
+</div>
+
         </div>
         
 

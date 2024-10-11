@@ -18,7 +18,7 @@ const WorkSection: React.FC = () => {
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
   >
-    SuperEX NG
+    SuperEX NG 
   </Link>{' '}
   and{' '}
   <Link
@@ -27,9 +27,11 @@ const WorkSection: React.FC = () => {
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
   >
-    ARTKIT
+    ARTKIT 
   </Link>
-  . I have contributed to frontend development, UI optimization, and content creation across different platforms. 
+  {' '} as a Content Writer. {' '}
+  <br />
+  When it comes web development! I have contributed to frontend development, UI optimization, and content creation across different platforms. 
   My passion lies in blending design with functionality to create seamless user experiences. For more details, 
   check out my{' '}
   <Link
