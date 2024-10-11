@@ -116,7 +116,7 @@ export default function Portfolio() {
             <h1 className="text-4xl font-bold mb-2">Hello,</h1>
             <h2 className="text-5xl font-bold mb-4">I'm ENIGMA.</h2>
             <p className="text-sm md:text-xl text-gray-300 max-w-2xl">
-              I'm a software developer specializing in web development and other frontend infrastructure, I am content writer who writes blockchain related stuff, A student food technologist who doesn't Cook!'
+              I'm a software developer specializing developing frontend infrastructures, I am content writer who writes mostly blockchain related stuff, A student food technologist who doesn't Cook!'
                My passion is building stuff that makes life easier for everyone. I also have some interests in AI tech!
             </p>
           </div>
