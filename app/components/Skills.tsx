@@ -27,7 +27,7 @@ const SkillsSection: React.FC = () => {
       opacity: 1,
       scale: 1,
       rotate: Math.random() * 360,
-      x: Math.random() * 400 - 200, // scatter effect on X axis
+      x: Math.random() * 400 - 200, 
       y: Math.random() * 400 - 200, // scatter effect on Y axis
       transition: {
         delay: i * 0.2,
