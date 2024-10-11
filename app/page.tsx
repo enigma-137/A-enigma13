@@ -102,10 +102,10 @@ export default function Portfolio() {
               <Clock className="w-4 h-4 mr-2" />
               <p className="text-xl font-bold">{currentTime.wat} WAT</p>
             </div>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <Clock className="w-4 h-4 mr-2" />
               <p className="text-xl font-bold">{currentTime.gmt} GMT</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
