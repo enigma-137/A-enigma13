@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900/100 `}
       >
-        <div className="bg-gray-900 w-full max-w-4xl mx-auto p-8 rounded-lg shadow-lg">
+        <div className="bg-gray-900 w-full max-w-6xl mx-auto p-1 rounded-lg shadow-lg">
           {children}
         </div>
 
