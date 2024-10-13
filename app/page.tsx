@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/carousel"
 import WorkSection from './components/Work'
 import SkillsSection from './components/Skills'
+import { Button } from '@/components/ui/button'
 
 
 interface Project {
@@ -40,7 +41,7 @@ export default function Portfolio() {
     return () => clearInterval(timer)
   }, [])
 
-  useEffect(() => {
+
     async function fetchJoke() {
       try {
         const response = await fetch('https://v2.jokeapi.dev/joke/Programming');
@@ -55,11 +56,12 @@ export default function Portfolio() {
         setJoke('Error loading joke, but hey, at least there\'s no error 404! 😅');
       }
     }
-  
-    fetchJoke();
-  }, []);
+
   
 
+  useEffect(() => {
+    fetchJoke(); // Fetch a joke when the component mounts
+  }, []); 
   
   const featuredProjects: Project[] = [
     {
@@ -141,6 +143,13 @@ export default function Portfolio() {
           <div className="mt-12">
         <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
         <p className="text-xl text-gray-300">"{joke}"</p>
+
+        <Button
+        className="bg-sky-500 text-white my-2 px-4 py-2 rounded"
+        onClick={fetchJoke}
+      >
+        Get New Joke
+      </Button>
       </div>
         </div>
 
