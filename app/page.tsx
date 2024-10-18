@@ -89,27 +89,47 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex justify-center">
-      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        {/* Map and Time */}
-        <div className="relative h-64 md:ml-8 mb-8 rounded-lg overflow-hidden">
-          <Image
-            src="/image.png"
-            alt="Nigeria Map"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-20"
-          />
-          <div className="absolute top-4 right-4 bg-black bg-opacity-50 p-2 rounded">
-            <div className="flex items-center mb-2">
-              <Clock className="w-4 h-4 mr-2" />
-              <p className="text-xl font-bold">{currentTime.wat} WAT</p>
-            </div>
-            {/* <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              <p className="text-xl font-bold">{currentTime.gmt} GMT</p>
-            </div> */}
-          </div>
-        </div>
+
+<div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+
+{/* Map Image */}
+<div className="relative h-64 md:ml-8 mb-8 rounded-lg overflow-visible">
+  <Image
+    src="/image.png"
+    alt="Nigerian Map"
+    layout="fill"
+    objectFit="cover"
+    className="opacity-20"
+  />
+
+  {/* Time div */}
+  <div className="absolute top-4 left-4 bg-black bg-opacity-50 p-2 rounded">
+    <div className="flex items-center mb-2">
+      <Clock className="w-4 h-4 mr-2" />
+      <p className="text-xl font-bold">{currentTime.wat} WAT</p>
+    </div>
+  </div>
+
+  {/* User image */}
+  <div className="absolute top-3/4 overflow-visible transform -translate-y-1/2 z-10 right-4 bg-opacity-50 p-2">
+    <Tilt className="Tilt" options={{ max: 25, scale: 1.05 }}>
+      <Image
+        src="/b16fcff9-a4dc-48d0-b9c5-5e29ac1eb32f.webp"
+        alt="Profile"
+        width={200}
+        height={200}
+        className="rounded-lg      w-32 h-32    
+                     sm:w-40 sm:h-40 
+                     md:w-48 md:h-48 
+                     lg:w-52 lg:h-52 
+                     xl:w-56 xl:h-56 "
+      />
+    </Tilt>
+  </div>
+</div>
+
+
+       
 
         {/* Profile Section */}
         <div className="flex flex-row md:flex-row items-center mb-12">
@@ -122,35 +142,14 @@ export default function Portfolio() {
                My passion is building stuff that makes life easier for everyone. I also have interests in AI tech!
             </p>
           </div>
-          <Tilt className="Tilt" options={{ max: 25, scale: 1.05 }}>
-            <Image
-              src="/b16fcff9-a4dc-48d0-b9c5-5e29ac1eb32f.webp"
-              alt="Profile"
-              width={200}
-              height={200}
-              className="rounded-lg ml-5"
-            />
-          </Tilt>
+         
         </div>
 
       
 
     
         <div className="mb-12">
-          <h3 className="text-base font-bold mb-4 mt-9 p-12">//ignore this comment! keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
-          
-          
-          <div className="mt-12">
-        <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
-        <p className="text-xl text-gray-300">"{joke}"</p>
-
-        <Button
-        className="bg-sky-500 text-white my-2 px-4 py-2 rounded"
-        onClick={fetchJoke}
-      >
-        Get New Joke
-      </Button>
-      </div>
+          <h3 className="text-base font-bold mb-4 mt-9 p-12"> keep scrolling <ArrowDownIcon className='inline animate-pulse'/></h3>
         </div>
 
         {/* Featured Projects */}
@@ -191,6 +190,21 @@ export default function Portfolio() {
   <CarouselPrevious />
   <CarouselNext />
 </Carousel>
+
+
+<div className="pt-12">
+<div className="mt-12">
+        <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
+        <p className="text-xl text-gray-300">"{joke}"</p>
+
+        <Button
+        className="bg-sky-500 text-white my-2 px-4 py-2 rounded"
+        onClick={fetchJoke}
+      >
+        Get New Joke
+      </Button>
+      </div>
+</div>
 
 </div>
 <div className='max-w-4xl overflow-hidden '>
