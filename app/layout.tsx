@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { BookOpenText, Home, MailIcon, PencilIcon } from "lucide-react";
+import { BookOpenText, Home, MailIcon, } from "lucide-react";
 import Link from "next/link";
 
 
