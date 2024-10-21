@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Tilt } from 'react-tilt'
-import { MapPin, Star, Download, Clock, ArrowDownIcon, Users } from 'lucide-react'
+import { MapPin, Star, Download, Clock, ArrowDownIcon, Users, ArrowDown, CodeXmlIcon } from 'lucide-react'
 import Link from 'next/link'
 import WorkSection from './components/Work'
 import SkillsSection from './components/Skills'
@@ -28,6 +28,7 @@ export default function Portfolio() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -115,6 +116,17 @@ export default function Portfolio() {
   }
 
   const router = useRouter()
+
+  useEffect(() => {
+    const handleScrollY = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScrollY)
+    return () => {
+      window.removeEventListener('scroll', handleScrollY)
+    }
+  }, [])
   return (
     <div className="min-h-screen bg-gray-900 text-white flex justify-center">
 
@@ -160,7 +172,7 @@ export default function Portfolio() {
 
 
         {/* Profile Section */}
-        <div className="flex flex-row md:flex-row items-center mb-12">
+        <div className="flex flex-row md:flex-row items-center mt-24 mb-12">
 
           <div className="md:ml-8 mt-4 md:mt-0">
             <h1 className="text-4xl font-bold mb-2">Hello,</h1>
@@ -175,13 +187,8 @@ export default function Portfolio() {
 
 
 
-
-        <div className="mb-12">
-          <h3 className="text-base font-bold mb-4 mt-9 p-12"> keep scrolling <ArrowDownIcon className='inline animate-pulse' /></h3>
-        </div>
-
         {/* Featured Projects */}
-        <div className="mb-12">
+        <div className=" my-24">
           <h3 className="text-3xl font-bold mb-6">Featured projects</h3>
           <div className="relative">
             <div 
@@ -246,6 +253,35 @@ export default function Portfolio() {
          
 
           </div>
+
+          <div className="min-h-screen mt-12 text-white opacity-60 inset-0 bg-cover bg-center" 
+           style={{
+            backgroundImage: "url('/omo.jpg')",
+          
+          }}>
+      {/* Hero section with parallax effect */}
+      <div className="relative h-screen overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/omo.jpg')",
+            transform: `translateY(${scrollY * 0.5}px)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-center"><CodeXmlIcon /></h1>
+        </div>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-full p-4">
+            <h3 className="text-base font-bold">
+              keep scrolling <ArrowDown className="inline animate-bounce" />
+            </h3>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        
           <div className="pt-12">
             <div className="mt-12">
               <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
