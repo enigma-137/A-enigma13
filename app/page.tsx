@@ -282,7 +282,7 @@ export default function Portfolio() {
         </div>
 
         
-          <div className="pt-12">
+          <div className="pt-24">
             <div className="mt-12">
               <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
               <p className="text-xl text-gray-300">"{joke}"</p>
@@ -291,7 +291,7 @@ export default function Portfolio() {
                 className="bg-sky-500 text-white my-2 px-4 py-2 rounded"
                 onClick={fetchJoke}
               >
-                Get New Joke
+                Get A New Joke
               </Button>
             </div>
 
