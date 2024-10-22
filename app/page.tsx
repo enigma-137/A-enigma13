@@ -179,7 +179,7 @@ export default function Portfolio() {
             <h2 className="text-5xl font-bold mb-4">I'm <span className='animate-pulse'>ENIGMA.</span></h2>
             <p className="text-sm md:text-xl text-gray-300 max-w-2xl">
               I'm a software developer specialized in developing modern frontend infrastructures, I am content writer who writes mostly blockchain related stuff, A student food technologist who doesn't Cook!'
-              My passion is building stuff that makes life easier for everyone. I also have interests in AI tech!
+              My passion is building stuff that makes life easier for everyone. I also have interests in AI and ML tech!
             </p>
           </div>
 
@@ -189,7 +189,7 @@ export default function Portfolio() {
 
         {/* Featured Projects */}
         <div className=" my-24">
-          <h3 className="text-3xl font-bold mb-6">Featured projects</h3>
+          <h3 className="text-3xl font-bold mb-6">&lt;Featured Projects /&gt;</h3>
           <div className="relative">
             <div 
               ref={scrollContainerRef}
