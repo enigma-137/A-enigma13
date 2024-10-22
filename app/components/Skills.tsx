@@ -50,7 +50,7 @@ const SkillsSection: React.FC = () => {
 
       <div className="relative flex justify-center items-center">
         {/* Central Skill */}
-        <motion.div className="relative w-12 h-12 md:w-24 md:h-24 rounded-full flex justify-center animate-pulse items-center">
+        <motion.div className="relative border-4 border-white w-12 h-12 md:w-24 md:h-24 rounded-full flex justify-center animate-pulse items-center">
           <Image
             src="/nextjs.png"
             alt="Next.js"
@@ -100,7 +100,7 @@ const SkillsSection: React.FC = () => {
           animate={{ rotate: -360 }}
           transition={{
             repeat: Infinity,
-            duration: orbitDuration * 1.5, // Slightly slower
+            duration: orbitDuration * 1.5, // Slightly slower than previous
             ease: 'linear',
           }}
         >
@@ -118,7 +118,7 @@ const SkillsSection: React.FC = () => {
               <Image
                 src={skill.image}
                 alt={skill.name}
-                className="w-full h-full border-4 border-white rounded-full object-contain"
+                className="w-full h-full border-4 border-white animate-pulse rounded-full object-contain"
                 width={225}
                 height={225}
               />
@@ -133,7 +133,7 @@ const SkillsSection: React.FC = () => {
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,
-            duration: orbitDuration * 2, // Slowest rotation
+            duration: orbitDuration * 2, // Slowest rotation 60
             ease: 'linear',
           }}
         >
