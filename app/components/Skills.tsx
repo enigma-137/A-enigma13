@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import React from 'react';
 
@@ -45,8 +46,9 @@ const getTranslateX3 = () => {
 
 const SkillsSection: React.FC = () => {
   return (
+    
     <div className="relative w-full h-screen flex justify-center items-center">
-      <h2 className="text-3xl font-bold text-white mb-6 underline absolute top-10">Skills</h2>
+      <h2 className="text-3xl font-bold text-white mb-6 underline absolute text-left top-10">&lt;Skills /&gt;</h2>
 
       <div className="relative flex justify-center items-center">
         {/* Central Skill */}
