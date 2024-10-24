@@ -65,7 +65,7 @@ const ContactForm: React.FC = () => {
             {isClient && (
               <div className="text-xl font-mono text-white">
                 <Typewriter
-                  words={["What is your name?"]}
+                  words={["What can we call you?"]}
                   loop={1}
                   cursor
                   cursorStyle="_"
@@ -135,7 +135,7 @@ const ContactForm: React.FC = () => {
                 {isClient && (
                   <div className="text-xl font-mono text-white">
                     <Typewriter
-                      words={["Your Message?"]}
+                      words={["What Message are you sending?"]}
                       loop={1}
                       cursor
                       cursorStyle="_"
