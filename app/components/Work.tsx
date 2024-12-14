@@ -7,8 +7,8 @@ const WorkSection: React.FC = () => {
   return (
     <div className="bg-gray-900 text-gray-300 p-8">
     
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-6">&lt;Work /&gt; </h2>
+      <div className="mb-6">
+        <h2 className="text-xl font-bold text-white mb-6">Work </h2>
        
         <p className="text-lg leading-relaxed">
   I’m a frontend developer and a writer, with experience working on various projects such as{' '}
@@ -48,13 +48,13 @@ const WorkSection: React.FC = () => {
 
       {/* Let's Connect Section */}
       <div>
-        <h2 className="text-3xl font-bold text-white mb-6"> &lt;Connect/&gt;</h2>
+        <h2 className="text-xl font-bold text-white mb-6"> Connect</h2>
         <p className="text-lg leading-relaxed mb-4">
           Feel free to reach out on any of these platforms:
         </p>
         <div className="flex space-x-6">
           <Link
-            href="https://x.com/0xenigmaix"
+            href="https://x.com/nigma0x"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-500 hover:text-white"

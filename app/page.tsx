@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Tilt } from 'react-tilt'
-import { MapPin, Star, Download, Clock, ArrowDownIcon, Users, ArrowDown, CodeXmlIcon } from 'lucide-react'
+import { MapPin, Star, Download, Clock, ArrowDownIcon, Users, ArrowDown, CodeXmlIcon, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
 import WorkSection from './components/Work'
 import SkillsSection from './components/Skills'
@@ -68,10 +68,10 @@ export default function Portfolio() {
     {
       name: 'Nuwell',
       users: '100+/month',
-      stars: 1,
+      stars: 3,
       image: '/WhatsApp Image 2024-10-10 at 5.27.22 AM.jpeg',
       link: 'https://nuwellx.vercel.app/',
-      download: "24"
+      download: "100+"
     },
     {
       name: 'Solar Bridge',
@@ -87,7 +87,7 @@ export default function Portfolio() {
       stars: 1,
       image: '/drops.png',
       link: 'https://drops-tracker.vercel.app/home',
-      download: "24"
+      download: "80"
     },
     {
       name: 'Ai Article Summarizer',
@@ -189,7 +189,7 @@ export default function Portfolio() {
 
         {/* Featured Projects */}
         <div className=" my-24">
-          <h3 className="text-3xl font-bold mb-6">&lt;Featured Projects /&gt;</h3>
+          <h3 className="text-xl font-bold mb-6">Featured Projects</h3>
           <div className="relative">
             <div 
               ref={scrollContainerRef}
@@ -198,35 +198,45 @@ export default function Portfolio() {
               
             >
               {featuredProjects.map((project) => (
-                <Card key={project.name} onClick={()=> router.push(`${project.link}`)} className="flex-shrink-0 w-72 cursor-pointer bg-gray-900 text-white">
-                  <CardHeader className="p-0">
-                    <div className="relative h-48">
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="px-4 py-1 ">
-                    <CardTitle className="text-xl mb-2 pt-2">{project.name}</CardTitle>
-                    <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-2 text-gray-400" />
-                    <p className="text-gray-400 mb-1 text-sm">{project.users}</p>
-                    </div>
-                  </CardContent>
-                  <CardFooter className=" flex justify-between items-center">
-                    <div className="flex items-center">
-                      <Download className="w-4 h-4 mr-2 text-gray-400" />
-                      <span className="text-sm text-gray-400">{project.download}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 mr-2 text-gray-400" />
-                      <span className="text-sm text-gray-400">{project.stars}</span>
-                    </div>
-                  </CardFooter>
-                </Card>
+               <Card key={project.name} onClick={() => router.push(`${project.link}`)} className="flex-shrink-0 w-72 h-56 cursor-pointer bg-gray-900 text-white">
+               <CardHeader className="p-0">
+                 <div className="relative h-56">
+                   <Image
+                     src={project.image}
+                     alt={project.name}
+                     layout="fill"
+                     objectFit="cover"
+                   />
+                   {/* Dark overlay for text visibility */}
+                   <div className="absolute inset-0 bg-black opacity-50"></div>
+             
+                   {/* Project Name and Users */}
+                   <div className="absolute bottom-4 left-4 z-10">
+                     <p className="text-xl mb-1">{project.name}</p>
+                     <div className="flex items-center text-sm">
+                       <Users className="w-4 h-4 mr-2 text-white" />
+                       <p className="text-white">{project.users}</p>
+                     </div>
+                   </div>
+             
+                   {/* Download icon at top-left */}
+                   <div className="absolute top-2 left-4 z-10 flex items-center">
+                     <Download className="w-4 h-4 mr-2 text-white" />
+                     <span className="text-sm text-white">{project.download}</span>
+                   </div>
+             
+                   {/* Star icon at top-right */}
+                   <div className="absolute top-2 right-4 z-10 flex items-center">
+                     <Star className="w-4 h-4 mr-2 text-white" />
+                     <span className="text-sm text-white">{project.stars}</span>
+                   </div>
+                 </div>
+               </CardHeader>
+               <CardContent className="px-4 py-1 "></CardContent>
+               <CardFooter className="flex justify-between items-center"></CardFooter>
+             </Card>
+             
+             
               ))}
             </div>
             {canScrollLeft && (
@@ -254,13 +264,13 @@ export default function Portfolio() {
 
           </div>
 
-          <div className="min-h-screen mt-12 text-white opacity-60 inset-0 bg-cover bg-center" 
+          {/* <div className="min-h-screen mt-12 text-white opacity-60 inset-0 bg-cover bg-center" 
            style={{
             backgroundImage: "url('/omo.jpg')",
           
-          }}>
+          }}> */}
       {/* Hero section with parallax effect */}
-      <div className="relative h-screen overflow-hidden">
+      {/* <div className="relative h-screen overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -277,21 +287,21 @@ export default function Portfolio() {
               keep scrolling <ArrowDown className="inline animate-bounce" />
             </h3>
           </div>
-        </div>
-        </div>
-        </div>
+        </div> */}
+        {/* </div> */}
+        {/* </div> */}
 
         
-          <div className="pt-24">
-            <div className="mt-12">
+          <div className="">
+            <div className="mt-4">
               <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
               <p className="text-xl text-gray-300">"{joke}"</p>
 
               <Button
-                className="bg-sky-500 text-white my-2 px-4 py-2 rounded"
+                className=" text-white my-2 px-4 py-2 rounded" variant="link"
                 onClick={fetchJoke}
               >
-                Get A New Joke
+                New <RefreshCcw className='ml-2 h-4 w-4' />
               </Button>
             </div>
 
