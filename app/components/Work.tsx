@@ -54,7 +54,7 @@ const WorkSection: React.FC = () => {
         </p>
         <div className="flex space-x-6">
           <Link
-            href="https://x.com/nigma0x"
+            href="https://x.com/nigmaQx"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-500 hover:text-white"
