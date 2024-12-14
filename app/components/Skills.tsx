@@ -47,7 +47,7 @@ const getTranslateX3 = () => {
 const SkillsSection: React.FC = () => {
   return (
     
-    <div className="relative w-full h-[50vh] flex justify-center items-center">
+    <div className="relative w-full h-[50vh] md:h-screen flex justify-center items-center">
       <h2 className="text-xl font-bold text-white mb-1 underline absolute text-left top-1">Skills</h2>
 
       <div className="relative flex justify-center items-center">
