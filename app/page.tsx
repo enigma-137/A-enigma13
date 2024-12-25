@@ -292,25 +292,25 @@ export default function Portfolio() {
         {/* </div> */}
 
         
-          <div className="">
+        
+        <div className='max-w-4xl overflow-hidden '>
+          <WorkSection />
+          <SkillsSection />
+        </div>
+        <div className="">
             <div className="mt-4">
-              <h3 className="text-sm text-foreground text-gray-100 mb-2">😂😂</h3>
+              <h3 className="text-sm text-foreground text-gray-100 mb-2">--</h3>
               <p className="text-xl text-gray-300">"{joke}"</p>
 
               <Button
                 className=" text-white my-2 px-4 py-2 rounded" variant="link"
                 onClick={fetchJoke}
               >
-                New <RefreshCcw className='ml-2 h-4 w-4' />
+                <RefreshCcw className='ml-2 h-4 w-4' />
               </Button>
             </div>
 
         </div>
-        <div className='max-w-4xl overflow-hidden '>
-          <WorkSection />
-          <SkillsSection />
-        </div>
-
       </div>
 
 </div>
