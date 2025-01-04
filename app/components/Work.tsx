@@ -32,7 +32,7 @@ const WorkSection: React.FC = () => {
     <div className="">
       {/* Work Section */}
       <div ref={workRef} className="mb-6">
-        <h2 className="text-xl font-bold  mb-6">
+        <h2 className="text-xl font-bold  mb-2">
          Work
         </h2>
         <p className="text-base leading-relaxed">

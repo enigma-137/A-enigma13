@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import WorkSection from './components/Work';
 import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Clock } from 'lucide-react';
 import { FeaturedProjects } from '@/components/featured-projects';
 import SkillsSection from './components/Skills';
 
@@ -67,6 +67,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+   <p className='text-sm p-4'><Clock  className='h-4 w-4 inline'/>  {currentTime.wat} WAT</p>  
       <div className="w-full max-w-4xl px-4 py-8 mx-auto relative">
         {/* Theme Toggle */}
         <button
@@ -77,6 +78,8 @@ export default function Portfolio() {
           {theme === 'light' ? <Moon className="w-6 h-6" /> : <Sun className="w-6 h-6" />}
         </button>
 
+       
+
         {/* Navigation Icon */}
         <div className="flex items-center mb-8">
           <Image
@@ -86,12 +89,13 @@ export default function Portfolio() {
             height={80}
             className="rounded-full border-4 border-border"
           />
+        
         </div>
 
         {/* Profile Section */}
         <div className="text-left mb-12">
-          <h1 className="text-2xl font-bold mb-2">Hello,</h1>
-          <h2 className="text-3xl font-bold mb-4">
+          <h1 className="text-xl font-bold mb-2">Hello,</h1>
+          <h2 className="text-2xl font-bold mb-4">
             I'm <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-base text-muted-foreground">
