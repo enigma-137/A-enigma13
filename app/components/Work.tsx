@@ -29,26 +29,26 @@ const WorkSection: React.FC = () => {
   }, [workInView, connectInView]);
 
   return (
-    <div className="bg-gray-900 text-gray-300 p-8">
+    <div className="">
       {/* Work Section */}
       <div ref={workRef} className="mb-6">
-        <h2 className="text-xl font-bold text-white mb-6">
+        <h2 className="text-xl font-bold  mb-6">
          Work
         </h2>
-        <p className="text-lg leading-relaxed">
-          {startTypingWork ? (
+        <p className="text-base leading-relaxed">
+          {/* {startTypingWork ? (
             <Typewriter
               options={{
                 strings: [
                   `I’m a frontend developer and a writer, with experience working on various projects such as SuperEX NG and ARTKIT as a Content Writer. When it comes to web development, I have contributed to frontend development, UI optimization, and content creation across different platforms. My passion lies in blending design with functionality to create seamless user experiences..`,
                 ],
                 autoStart: true,
-                loop: true,
-                delay: 20,
+                loop: false,
+                delay: 80,
                 cursor: '|',
               }}
             />
-          ) : (
+          ) : ( */}
             <>
               I’m a frontend developer and a writer, with experience working on various projects such as{' '}
               <Link
@@ -80,13 +80,13 @@ const WorkSection: React.FC = () => {
               </Link>
               .
             </>
-          )}
+          {/* )} */}
         </p>
       </div>
 
       {/* Connect Section */}
       <div ref={connectRef}>
-        <h2 className="text-xl font-bold text-white mb-6">
+        <h2 className="text-xl font-bold mb-2">
        Connect
         </h2>
         <p className="text-lg leading-relaxed mb-4">

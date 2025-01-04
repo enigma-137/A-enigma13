@@ -51,19 +51,19 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-900 text-gray-200 p-4">
+    <div className="h-screen flex flex-col justify-center items-center  p-4">
       <ToastContainer />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="max-w-lg w-full p-8 bg-gray-800 rounded-lg shadow-lg"
+        className="max-w-lg w-full p-8  rounded-lg shadow-lg"
       >
         {!submitted ? (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Name Input Step */}
             {isClient && (
-              <div className="text-xl font-mono text-white">
+              <div className="text-xl font-mono">
                 <Typewriter
                   words={["What can we call you?"]}
                   loop={1}
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
                 {...register('name', { required: 'Name is required' })}
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3 bg-gray-700 border-none rounded-lg"
+                className="w-full p-3  border-none rounded-lg"
                 onKeyDown={(event) => handleKeyDown(event, () => setShowEmailInput(true))}
               />
               {errors.name && <p className="text-red-500">{errors.name.message}</p>}
@@ -122,7 +122,7 @@ const ContactForm: React.FC = () => {
                     })}
                     type="email"
                     placeholder="Your Email"
-                    className="w-full p-3 bg-gray-700 border-none rounded-lg"
+                    className="w-full p-3  border-none rounded-lg"
                     onKeyDown={(event) => handleKeyDown(event, () => setShowMessageInput(true))}
                   />
                   {errors.email && <p className="text-red-500">{errors.email.message}</p>}
@@ -133,7 +133,7 @@ const ContactForm: React.FC = () => {
             {showMessageInput && (
               <>
                 {isClient && (
-                  <div className="text-xl font-mono text-white">
+                  <div className="text-xl font-mono">
                     <Typewriter
                       words={["What Message are you sending?"]}
                       loop={1}
@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
                       },
                     })}
                     placeholder="Your Message"
-                    className="w-full p-3 bg-gray-700 border-none rounded-lg h-32"
+                    className="w-full p-3  border-none rounded-lg h-32"
                   />
                   {errors.message && <p className="text-red-500">{errors.message.message}</p>}
                 </motion.div>

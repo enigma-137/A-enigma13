@@ -41,10 +41,10 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-    <h1 className="text-3xl font-bold mb-8 text-white text-center">My Blog</h1>
+    <h1 className="text-3xl font-bold mb-8 text-center">My Blog</h1>
     <div className="grid grid-cols-1  gap-6">
       {blogPosts.map((post, index) => (
-        <Card key={index} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <Card key={index} className=" rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
           <CardContent className="p-6">
             <CardTitle className="text-xl font-semibold text-white">{post.title}</CardTitle>
             <CardDescription className="text-gray-400 mb-4">{post.intro}</CardDescription>
