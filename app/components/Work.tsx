@@ -35,7 +35,7 @@ const WorkSection: React.FC = () => {
         <h2 className="text-lg font-bold  mb-2">
          Work
         </h2>
-        <p className="text-base leading-relaxed">
+        <p className="text-sm leading-relaxed">
           {/* {startTypingWork ? (
             <Typewriter
               options={{
