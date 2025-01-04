@@ -9,15 +9,14 @@ const skills  = [
   { name: "Prisma", image: "/prisma.png" },
   { name: "Framer Motion", image: "/motions.png" },
   { name: "TailwindCSS", image: "/tailwind.png" },
-
   { name: "Next.js", image: "/nextjs.png" },
   { name: "ShadCN UI", image: "/shadcn.png" },
-  { name: "Google Docs", image: "/docs.png" },
+
 ];
 
 const SkillsSection: React.FC = () => {
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-20">
       <div className="container">
         <h2 className="text-lg font-bold mb-4">I mostly use these tools..</h2>
         <p className="text-muted-foreground mb-8">
