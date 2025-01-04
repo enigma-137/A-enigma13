@@ -46,7 +46,7 @@ export default function BlogPage() {
       {blogPosts.map((post, index) => (
         <Card key={index} className=" rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
           <CardContent className="p-6">
-            <CardTitle className="text-xl font-semibold text-white">{post.title}</CardTitle>
+            <CardTitle className="text-xl font-semibold ">{post.title}</CardTitle>
             <CardDescription className="text-gray-400 mb-4">{post.intro}</CardDescription>
             <Button className="mt-4" color="primary">
               <Link href={post.url} target="_blank" rel="noopener noreferrer">
