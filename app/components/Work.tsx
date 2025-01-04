@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Twitter } from 'lucide-react';
+
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -84,41 +84,7 @@ const WorkSection: React.FC = () => {
         </p>
       </div>
 
-      {/* Connect Section */}
-      <div ref={connectRef}>
-        <h2 className="text-xl font-bold mb-2">
-       Connect
-        </h2>
-        <p className="text-lg leading-relaxed mb-4">
-          Feel free to reach out on any of these platforms:
-        </p>
-        <div className="flex space-x-6">
-          <Link
-            href="https://x.com/nigmaQx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-500 hover:text-white"
-          >
-            <Twitter size={24} />
-          </Link>
-          <Link
-            href="https://github.com/enigma-137"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-500 hover:text-white"
-          >
-            <Github size={24} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/emmanuel-onoja-22b7a51a7/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-500 hover:text-white"
-          >
-            <Linkedin size={24} />
-          </Link>
-        </div>
-      </div>
+     
     </div>
   );
 };

@@ -19,7 +19,7 @@ const SkillsSection: React.FC = () => {
   return (
     <section className="w-full py-12">
       <div className="container">
-        <h2 className="text-2xl font-bold mb-4">I mostly use but not limited to these tools..</h2>
+        <h2 className="text-xl font-bold mb-4">I mostly use these tools..</h2>
         <p className="text-muted-foreground mb-8">
         My primary stack revolves around Next.js, TypeScript, ShadCN UI and MongoDB. 
         </p>

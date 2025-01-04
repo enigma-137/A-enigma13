@@ -23,7 +23,7 @@ interface FeaturedProjectsProps {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   return (
     <div>
-      <h3 className="text-xl font-bold mt-6 mb-6">Featured Projects</h3>
+      <h3 className="text-xl font-bold mt-9 mb-6">Featured Projects</h3>
       <Carousel className="w-full">
         <CarouselContent className="-ml-2 md:-ml-4">
           {projects.map((project) => (
