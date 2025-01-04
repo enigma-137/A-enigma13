@@ -109,13 +109,13 @@ export default function Portfolio() {
         <div className=''>
           <WorkSection />
         </div>
-
+        <h3 className="text-lg font-bold mt-9 mb-6">Featured Projects.</h3>
         <FeaturedProjects projects={featuredProjects} />
 
          {/* Connect Section */}
       <div className='py-6'>
         <h2 className="text-lg font-bold">
-       Connect
+       Connect.
         </h2>
         <p className="text-base leading-relaxed mb-4">
           Feel free to reach out on any of these platforms:

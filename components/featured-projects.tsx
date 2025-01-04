@@ -24,7 +24,6 @@ interface FeaturedProjectsProps {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   return (
     <div className='relative px-12 '>
-      <h3 className="text-lg font-bold mt-9 mb-6">Featured Projects</h3>
       <Carousel className="w-full ">
         <CarouselContent className="-ml-2 md:-ml-4">
           {projects.map((project) => (
