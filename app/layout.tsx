@@ -46,7 +46,7 @@ export default function RootLayout({
             {children}
           </div>
 
-          <nav className="fixed bottom-0 left-0 right-0 mx-auto bg-gradient-to-br from-background/90 to-muted text-muted-foreground w-max rounded-lg px-6 py-4 my-8 backdrop-blur-sm">
+          <nav className="fixed bottom-0 left-0 right-0 mx-auto bg-gradient-to-br from-background/90 to-muted text-muted-foreground w-max rounded-lg px-6 py-6 my-8 backdrop-blur-sm">
             <div className="flex justify-center space-x-8">
               <Link
                 href="/"

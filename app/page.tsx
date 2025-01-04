@@ -102,7 +102,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-base text-muted-foreground">
             I am a software developer specialized in developing modern frontend infrastructures. My passion is building
-            stuff that makes life easier for everyone. I also have interests in AI and ML tech!
+            stuff. I also have interests in AI and ML tech!
           </p>
         </div>
 
@@ -147,7 +147,10 @@ export default function Portfolio() {
           </Link>
         </div>
       </div>
-        <SkillsSection />
+      <div className='mb-4'>
+      <SkillsSection />
+      </div>
+     
       </div>
 
       

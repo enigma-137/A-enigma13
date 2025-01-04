@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Droplets, Star, Users } from 'lucide-react';
 
 interface Project {
   name: string;
@@ -22,24 +23,29 @@ interface FeaturedProjectsProps {
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   return (
-    <div>
+    <div className='relative px-12 '>
       <h3 className="text-lg font-bold mt-9 mb-6">Featured Projects</h3>
-      <Carousel className="w-full">
+      <Carousel className="w-full ">
         <CarouselContent className="-ml-2 md:-ml-4">
           {projects.map((project) => (
             <CarouselItem key={project.name} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <Card
+              <div
                 onClick={() => window.open(project.link, '_blank')}
                 className="cursor-pointer hover:bg-accent/50 transition-colors"
               >
-                <CardHeader className="p-0">
-                  <div className="relative h-10"></div>
+                <div className="p-0 shadow-lg">
+                  <div className="relative h-10"> </div>
                   <div className="p-4">
+
                     <h4 className="text-lg font-semibold">{project.name}</h4>
-                    <p className="text-sm text-muted-foreground">{project.users}</p>
+                    <div className='flex flex-row justify-between'>
+                    <p className="text-sm text-muted-foreground"><Users className='inline h-3 w-3'/> {project.users}</p>
+                    <p className="text-sm text-muted-foreground"><Star  className='inline h-3 w-3'/>{project.stars}</p>
+                    </div>
+   
                   </div>
-                </CardHeader>
-              </Card>
+                </div>
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
