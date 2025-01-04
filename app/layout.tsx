@@ -42,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full max-w-3xl mx-auto p-2 rounded-lg bg-background shadow-sm">
+          <div className="w-full md:max-w-4xl mx-auto p-2 rounded-lg bg-background shadow-sm">
             {children}
           </div>
 
