@@ -95,12 +95,11 @@ export default function Portfolio() {
         </div>
 
         {/* Profile Section */}
-        <div className="text-left mb-12">
-          <h1 className="text-xl font-bold mb-2">Hello,</h1>
-          <h2 className="text-2xl font-bold mb-4">
+        <div className="text-left mb-6">
+          <h2 className="text-lg font-bold mb-2">Hello,
             I'm <span className="animate-pulse">ENIGMA.</span>
           </h2>
-          <p className="text-base font-sans">
+          <p className="text-sm font-sans">
             I am a software developer specialized in developing modern frontend infrastructures. My passion is building
             stuff. I also have interests in AI and ML tech!
           </p>
@@ -109,15 +108,15 @@ export default function Portfolio() {
         <div className=''>
           <WorkSection />
         </div>
-        <h3 className="text-lg font-bold mt-9 mb-6">Featured Projects.</h3>
+        <h3 className="text-base font-bold mt-9 mb-6">Featured Projects.</h3>
         <FeaturedProjects projects={featuredProjects} />
 
          {/* Connect Section */}
-      <div className='py-6'>
+      <div className='py-2'>
         <h2 className="text-lg font-bold">
        Connect.
         </h2>
-        <p className="text-base leading-relaxed mb-4 font-sans">
+        <p className="text-sm leading-relaxed mb-4 font-sans">
           Feel free to reach out on any of these platforms:
         </p>
         <div className="flex space-x-6">

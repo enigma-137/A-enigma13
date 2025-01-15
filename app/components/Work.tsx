@@ -31,10 +31,10 @@ const WorkSection: React.FC = () => {
   return (
     <div className="">
       {/* Work Section */}
-      <div ref={workRef} className="mb-6">
-        <h2 className="text-lg font-bold font-sans  mb-2">
+      <div ref={workRef} className="mb-2">
+        <p className="text-base font-bold font-sans  mb-2">
          Work.
-        </h2>
+        </p>
         <p className="text-sm leading-relaxed font-sans">
           {/* {startTypingWork ? (
             <Typewriter
