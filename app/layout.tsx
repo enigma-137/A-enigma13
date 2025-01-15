@@ -1,20 +1,22 @@
+import { Inter, Poppins } from "next/font/google";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { ThemeProvider } from "./components/theme-provider";
 import "./globals.css";
 import { BookOpenText, Home, MailIcon } from "lucide-react";
 import Link from "next/link";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"], 
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   variable: "--font-poppins",
+//   weight: ["400", "500", "600", "700"], 
+// });
 
 export const metadata: Metadata = {
   title: "Enigma",
@@ -35,7 +37,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${inter.variable} antialiased`} 
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

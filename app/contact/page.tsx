@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center  p-4">
+    <div className="h-screen flex flex-col justify-center items-center font-sans  p-4">
       <ToastContainer />
       <motion.div
         initial={{ opacity: 0 }}

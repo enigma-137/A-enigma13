@@ -100,7 +100,7 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold mb-4">
             I'm <span className="animate-pulse">ENIGMA.</span>
           </h2>
-          <p className="text-base text-muted-foreground">
+          <p className="text-base font-sans">
             I am a software developer specialized in developing modern frontend infrastructures. My passion is building
             stuff. I also have interests in AI and ML tech!
           </p>
@@ -117,7 +117,7 @@ export default function Portfolio() {
         <h2 className="text-lg font-bold">
        Connect.
         </h2>
-        <p className="text-base leading-relaxed mb-4">
+        <p className="text-base leading-relaxed mb-4 font-sans">
           Feel free to reach out on any of these platforms:
         </p>
         <div className="flex space-x-6">

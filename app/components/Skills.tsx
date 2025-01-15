@@ -18,8 +18,8 @@ const SkillsSection: React.FC = () => {
   return (
     <section className="w-full py-20">
       <div className="container">
-        <h2 className="text-lg font-bold mb-4">Tools.</h2>
-        <p className="text-muted-foreground text-sm mb-8">
+        <h2 className="text-lg font-bold mb-4 font-sans">Tools.</h2>
+        <p className="text-muted-foreground text-sm mb-8 font-sans">
   My primary stack focuses on Next.js, TypeScript, ShadCN UI, and MongoDB. However, I adapt to different tools and technologies as needed &lt; after all, they’re just tools :)  &gt;
 </p>
 
@@ -28,7 +28,7 @@ const SkillsSection: React.FC = () => {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="inline-flex items-center gap-2 px-3 py-1.5 bg-muted rounded-full text-sm"
+              className="inline-flex font-sans items-center gap-2 px-3 py-1.5 bg-muted rounded-full text-sm"
             >
               <Image
                 src={skill.image}

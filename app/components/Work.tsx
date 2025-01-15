@@ -32,10 +32,10 @@ const WorkSection: React.FC = () => {
     <div className="">
       {/* Work Section */}
       <div ref={workRef} className="mb-6">
-        <h2 className="text-lg font-bold  mb-2">
+        <h2 className="text-lg font-bold font-sans  mb-2">
          Work.
         </h2>
-        <p className="text-sm leading-relaxed">
+        <p className="text-sm leading-relaxed font-sans">
           {/* {startTypingWork ? (
             <Typewriter
               options={{
@@ -49,37 +49,47 @@ const WorkSection: React.FC = () => {
               }}
             />
           ) : ( */}
-            <>
-              I’m a frontend developer and a writer, with experience working on various projects such as{' '}
-              <Link
-                href="https://superex.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-500 hover:underline"
-              >
-                SuperEX NG
-              </Link>{' '}
-              and{' '}
-              <Link
-                href="https://artkit.art"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-500 hover:underline"
-              >
-                ARTKIT
-              </Link>{' '}
-              as a Content Writer. <br />
-              When it comes to web development, I have contributed to frontend development, UI optimization, and content creation across different platforms. My passion lies in blending design with functionality to create seamless user experiences. For more details, check out my{' '}
-              <Link
-                href="/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-500 hover:underline"
-              >
-                CV
-              </Link>
-              .
-            </>
+           <>
+  As a writer, I've had experience working with great projects like{' '}
+  <Link
+    href="https://superex.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:underline"
+  >
+    SuperEX NG
+  </Link>{' '}
+  and{' '}
+  <Link
+    href="https://artkit.art"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:underline"
+  >
+    ARTKIT 
+  </Link>{' '}. <br />
+ Also working as an AI Research Assistant at {' '}
+  <Link
+    href="https://jojo.exchange/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:underline"
+  >
+  Jojo Exchange
+  </Link>
+  . <br />
+  When it comes to web development, I have contributed to frontend development, UI optimization, and content creation across different platforms. My passion lies in blending design with functionality to create seamless user experiences. For more details, check out my{' '}
+  <Link
+    href="/cv.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:underline"
+  >
+    CV
+  </Link>
+  .
+</>
+
           {/* )} */}
         </p>
       </div>

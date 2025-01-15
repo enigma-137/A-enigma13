@@ -39,7 +39,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                     <h4 className="text-lg font-semibold">{project.name}</h4>
                     <div className='flex flex-row justify-between'>
                     <p className="text-sm text-muted-foreground"><Users className='inline h-3 w-3'/> {project.users}</p>
-                    <p className="text-sm text-muted-foreground"><Star  className='inline h-3 w-3'/>{project.stars}</p>
+                    <p className="text-xs text-muted-foreground"><Star  className='inline h-3 w-3 mr-2' fill='grey'/>{project.stars}</p>
                     </div>
    
                   </div>
