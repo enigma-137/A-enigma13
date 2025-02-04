@@ -100,7 +100,7 @@ export default function Portfolio() {
             I'm <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-            I am a software developer specialized in developing modern frontend infrastructures. My passion is building
+            I write articles about Blockchain And Decentralization, I am software developer specialized in developing modern frontend infrastructures. My passion is building
             stuff. I also have interests in AI and ML tech!
           </p>
         </div>
