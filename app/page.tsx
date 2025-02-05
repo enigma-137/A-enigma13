@@ -101,7 +101,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-sm font-sans">
             I write articles about Blockchain And Decentralization, I am a software developer specialized in developing modern frontend infrastructures. I have this passion for building
-           interesting stuff. I also have interests in AI and ML tech!
+           interesting stuff. I also have interests in AI and ML
           </p>
         </div>
 
