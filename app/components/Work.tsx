@@ -49,8 +49,20 @@ const WorkSection: React.FC = () => {
               }}
             />
           ) : ( */}
-           <>
-  As a writer, I've had experience working with great projects like{' '}
+       <>
+  I've worked across different domains in tech — contributing as a frontend developer, AI research assistant, and as a writer. <br />
+  I’m currently building intelligent user-facing systems with a focus on clean UI, performance, and scalable frontend architectures. <br />
+  At{' '}
+  <Link
+    href="https://jojo.exchange/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:underline"
+  >
+    Jojo Exchange
+  </Link>
+  , I work as an AI Research Assistant exploring ways AI can enhance decentralized trading experiences. <br />
+  My earlier roles involved content development at{' '}
   <Link
     href="https://superex.com"
     target="_blank"
@@ -66,19 +78,9 @@ const WorkSection: React.FC = () => {
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
   >
-    ARTKIT 
-  </Link>{' '}. <br />
- Also working as an AI Research Assistant at {' '}
-  <Link
-    href="https://jojo.exchange/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"
-  >
-  Jojo Exchange
-  </Link>
-  . <br />
-  When it comes to web development, I have contributed to frontend development, UI optimization, and content creation across different platforms. My passion lies in blending design with functionality to create seamless user experiences. For more details, check out my{' '}
+    ARTKIT
+  </Link>, where I developed articles and technical documentation. <br />
+  Today, I’m focused on using TypeScript, React, and AI APIs to build smarter interfaces. For more, check my{' '}
   <Link
     href="/cv.pdf"
     target="_blank"
@@ -89,6 +91,7 @@ const WorkSection: React.FC = () => {
   </Link>
   .
 </>
+
 
           {/* )} */}
         </p>

@@ -40,10 +40,16 @@ export default function Portfolio() {
 
   const featuredProjects: Project[] = [
     {
-      name: 'Nuwell',
+      name: 'Nuwell AI',
       users: '100+/month',
       stars: 3,
-      link: 'https://nuwellx.vercel.app/',
+      link: 'nuwellai.com/',
+    },
+    {
+      name: 'FST-Cloud',
+      users: '120+/month',
+      stars: 1,
+      link: 'https://fst-cloud.vercel.app/',
     },
     {
       name: 'Solar Bridge',
@@ -62,6 +68,7 @@ export default function Portfolio() {
       link: 'https://enigmaaisummarizer.vercel.app/',
       stars: 1,
       users: '56/M',
+      
     },
   ];
 
@@ -100,9 +107,9 @@ export default function Portfolio() {
             I'm <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-            I write articles about Blockchain And Decentralization, I am a software developer specialized in developing modern frontend infrastructures. I have this passion for building
-           interesting stuff. I also have interests in AI and ML
-          </p>
+  I'm a software developer passionate about crafting modern frontend architectures and intelligent digital experiences. I specialize in building scalable, interactive web apps and enjoy experimenting with AI, ML, and automation tools. My work explores how code can solve real-world problems and push the boundaries of what's possible with software.
+</p>
+
         </div>
 
         <div className=''>
