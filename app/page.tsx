@@ -41,7 +41,7 @@ export default function Portfolio() {
   const featuredProjects: Project[] = [
     {
       name: 'Nuwell AI',
-      users: '100+/month',
+      users: '150+/month',
       stars: 3,
       link: 'nuwellai.com/',
     },

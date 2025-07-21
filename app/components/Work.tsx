@@ -82,7 +82,7 @@ const WorkSection: React.FC = () => {
   </Link>, where I developed articles and technical documentation. <br />
   Today, I’m focused on using TypeScript, React, and AI APIs to build smarter interfaces. For more, check my{' '}
   <Link
-    href="/cv.pdf"
+    href="/resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
