@@ -49,20 +49,17 @@ const WorkSection: React.FC = () => {
               }}
             />
           ) : ( */}
-       <>
-  I've worked across different domains in tech — contributing as a frontend developer, AI research assistant, and as a writer. <br />
-  I’m currently building intelligent user-facing systems with a focus on clean UI, performance, and scalable frontend architectures. <br />
-  At{' '}
-  <Link
-    href="https://jojo.exchange/"
+ <>
+  I build software across both web and mobile platforms, with experience spanning frontend engineering, mobile development, and AI-driven interfaces. <br />
+  Currently, I’m focused on creating intelligent user-facing systems — emphasizing clean UI, performance, and scalable architectures using TypeScript, React, React Native, and AI APIs. <br />
+  
+  I’ve been working on both the web and mobile versions of{' '}
+  <strong> <Link href="https://nuwellai.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"
-  >
-    Jojo Exchange
-  </Link>
-  , I work as an AI Research Assistant exploring ways AI can enhance decentralized trading experiences. <br />
-  My earlier roles involved content development at{' '}
+    className="text-sky-500 hover:underline"> NuWell AI</Link></strong>, a health and nutrition platform that leverages computer vision and intelligent recommendations. <br />
+  
+  I started out at{' '}
   <Link
     href="https://superex.com"
     target="_blank"
@@ -70,19 +67,23 @@ const WorkSection: React.FC = () => {
     className="text-sky-500 hover:underline"
   >
     SuperEX NG
-  </Link>{' '}
-  and{' '}
+  </Link>
+  , where I contributed as a frontend mobile developer — building and maintaining core features of their mobile application. <br />
+  
+  I have also worked at{' '}
   <Link
-    href="https://artkit.art"
+    href="https://jojo.exchange/"
     target="_blank"
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
   >
-    ARTKIT
-  </Link>, where I developed articles and technical documentation. <br />
-  Today, I’m focused on using TypeScript, React, and AI APIs to build smarter interfaces. For more, check my{' '}
+    Jojo Exchange
+  </Link>{' '}
+  as an AI Development Assistant, exploring how AI can improve decentralized trading experiences. <br />
+  
+  For more details, see my{' '}
   <Link
-    href="/resume.pdf"
+    href="/resumes.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-sky-500 hover:underline"
@@ -91,6 +92,8 @@ const WorkSection: React.FC = () => {
   </Link>
   .
 </>
+
+
 
 
           {/* )} */}
