@@ -7,7 +7,6 @@ import {
   } from "@/components/ui/card"
   
 import { Button } from '@/components/ui/button';
-import Head from 'next/head';
 import Link from "next/link";
 
 const blogPosts = [

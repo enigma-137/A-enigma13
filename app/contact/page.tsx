@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
-import { Typewriter } from 'react-simple-typewriter'; // Import from react-simple-typewriter
+import { Typewriter } from 'react-simple-typewriter'; 
 
 interface FormInputs {
   name: string;
@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
   const [showEmailInput, setShowEmailInput] = useState(false);
   const [showMessageInput, setShowMessageInput] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Add this state
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
     setIsClient(true);
@@ -65,7 +65,7 @@ const ContactForm: React.FC = () => {
             {isClient && (
               <div className="text-xl font-mono">
                 <Typewriter
-                  words={["What can we call you?"]}
+                  words={["Please enter your name"]}
                   loop={1}
                   cursor
                   cursorStyle="_"
@@ -96,7 +96,7 @@ const ContactForm: React.FC = () => {
                 {isClient && (
                   <div className="text-xl font-mono text-white">
                     <Typewriter
-                      words={["What is your email?"]}
+                      words={["Now enter your email?"]}
                       loop={1}
                       cursor
                       cursorStyle="_"
@@ -135,7 +135,7 @@ const ContactForm: React.FC = () => {
                 {isClient && (
                   <div className="text-xl font-mono">
                     <Typewriter
-                      words={["What Message are you sending?"]}
+                      words={["Now enter your message"]}
                       loop={1}
                       cursor
                       cursorStyle="_"
@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
                   {errors.message && <p className="text-red-500">{errors.message.message}</p>}
                 </motion.div>
 
-                {/* Submit Button (only show after all inputs are completed) */}
+                {/* Submit Button (only shows after all inputs are completed) */}
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

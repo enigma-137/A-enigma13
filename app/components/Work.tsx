@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import dynamic from 'next/dynamic';
 
-// Dynamically import Typewriter to disable SSR
+// Dynamically imported Typewriter to disable SSR
 const Typewriter = dynamic(() => import('typewriter-effect'), { ssr: false });
 
 const WorkSection: React.FC = () => {
@@ -30,7 +30,7 @@ const WorkSection: React.FC = () => {
 
   return (
     <div className="">
-      {/* Work Section */}
+   
       <div ref={workRef} className="mb-2">
         <p className="text-base font-bold font-sans  mb-2">
          Work.
@@ -92,10 +92,6 @@ const WorkSection: React.FC = () => {
   </Link>
   .
 </>
-
-
-
-
           {/* )} */}
         </p>
       </div>

@@ -12,11 +12,6 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"], 
 });
 
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   variable: "--font-poppins",
-//   weight: ["400", "500", "600", "700"], 
-// });
 
 export const metadata: Metadata = {
   title: "Enigma",

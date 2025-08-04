@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const skills  = [
+const skills = [
   { name: "JavaScript", image: "/js.png" },
   { name: "React", image: "/react.png" },
   { name: "TypeScript", image: "/typescipt.png" },
@@ -11,7 +11,6 @@ const skills  = [
   { name: "TailwindCSS", image: "/tailwind.png" },
   { name: "Next.js", image: "/nextjs.png" },
   { name: "ShadCN UI", image: "/shadcn.png" },
-
 ];
 
 const SkillsSection: React.FC = () => {
@@ -20,9 +19,10 @@ const SkillsSection: React.FC = () => {
       <div className="container">
         <h2 className="text-base font-bold mb-4 font-sans">Tools.</h2>
         <p className="text-muted-foreground text-sm mb-8 font-sans">
-  My primary stack focuses on Next.js, TypeScript, ShadCN UI, and MongoDB. However, I adapt to different tools and technologies as needed &lt; after all, they’re just tools :)  &gt;
-</p>
-
+          My primary stack focuses on Next.js, TypeScript, ShadCN UI, and
+          MongoDB. However, I adapt to different tools and technologies as
+          needed &lt; after all, they’re just tools :) &gt;
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (

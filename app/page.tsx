@@ -41,7 +41,7 @@ export default function Portfolio() {
   const featuredProjects: Project[] = [
     {
       name: 'Nuwell AI',
-      users: '150+/month',
+      users: '400+/month',
       stars: 3,
       link: 'nuwellai.com/',
     },
@@ -90,7 +90,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground">
    <p className='text-sm p-4'><Clock  className='h-4 w-4 inline'/>  {currentTime.wat} WAT</p>  
       <div className="w-full max-w-4xl px-4 py-8 mx-auto relative">
-        {/* Theme Toggle */}
+      
         <button
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           className="absolute top-4 right-4 p-2 rounded-full border-2 border-border hover:bg-accent transition-colors"
@@ -101,7 +101,7 @@ export default function Portfolio() {
 
        
 
-        {/* Navigation Icon */}
+     
         <div className="flex items-center mb-8">
           <Image
             src="/freepik__adjust__44279.png"
