@@ -51,6 +51,18 @@ export default function Portfolio() {
       stars: 1,
       link: 'https://fst-cloud.vercel.app/',
     },
+        {
+      name: 'Spotivibes',
+      users: '18+/month',
+      stars: 1,
+      link: 'http://spotivibes-x.vercel.app/',
+    },
+        {
+      name: 'Crash out!!',
+      users: '44+/month',
+      stars: 1,
+      link: 'https://crash-out.vercel.app/',
+    },
     {
       name: 'Solar Bridge',
       link: 'https://solarbridge.vercel.app/',
