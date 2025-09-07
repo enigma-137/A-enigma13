@@ -57,31 +57,7 @@ export default function Portfolio() {
       stars: 1,
       link: 'http://spotivibes-x.vercel.app/',
     },
-        {
-      name: 'Crash out!!',
-      users: '44+/month',
-      stars: 1,
-      link: 'https://crash-out.vercel.app/',
-    },
-    {
-      name: 'Solar Bridge',
-      link: 'https://solarbridge.vercel.app/',
-      stars: 2,
-      users: '12/M',
-    },
-    {
-      name: 'Drops Tracker',
-      users: '20+/M',
-      stars: 1,
-      link: 'https://drops-tracker.vercel.app/home',
-    },
-    {
-      name: 'AI Article Summarizer',
-      link: 'https://enigmaaisummarizer.vercel.app/',
-      stars: 1,
-      users: '56/M',
-      
-    },
+
   ];
 
   if (!mounted) return null;
@@ -119,8 +95,8 @@ export default function Portfolio() {
          I am <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-  A software developer who is more about crafting modern frontend architectures and intelligent digital experiences. 
-  I specialize in building scalable, interactive software applications and enjoy experimenting with AI, and ML. My work explores how code can solve real-world problems and push the boundaries of what's possible with software.
+  A random software guy who is more about crafting modern and intelligent digital products. 
+ I explore how we can solve real-world problems and push the boundaries of what's possible with software.
 </p>
 
         </div>

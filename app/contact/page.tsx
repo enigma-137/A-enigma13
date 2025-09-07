@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
                 {...register('name', { required: 'Name is required' })}
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3  border-none rounded-lg"
+                className="w-full p-3 bg-primary/10 border border-primary/50 rounded-lg"
                 onKeyDown={(event) => handleKeyDown(event, () => setShowEmailInput(true))}
               />
               {errors.name && <p className="text-red-500">{errors.name.message}</p>}
@@ -122,7 +122,7 @@ const ContactForm: React.FC = () => {
                     })}
                     type="email"
                     placeholder="Your Email"
-                    className="w-full p-3  border-none rounded-lg"
+                    className="w-full p-3 bg-primary/10 border border-primary/50 rounded-lg"
                     onKeyDown={(event) => handleKeyDown(event, () => setShowMessageInput(true))}
                   />
                   {errors.email && <p className="text-red-500">{errors.email.message}</p>}
@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
                       },
                     })}
                     placeholder="Your Message"
-                    className="w-full p-3  border-none rounded-lg h-32"
+                    className="w-full p-3 bg-primary/10 border border-primary/50 rounded-lg h-32"
                   />
                   {errors.message && <p className="text-red-500">{errors.message.message}</p>}
                 </motion.div>

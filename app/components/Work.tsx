@@ -30,10 +30,10 @@ const WorkSection: React.FC = () => {
 
   return (
     <div className="">
-   
+
       <div ref={workRef} className="mb-2">
         <p className="text-base font-bold font-sans  mb-2">
-         Work.
+          Work.
         </p>
         <p className="text-sm leading-relaxed font-sans">
           {/* {startTypingWork ? (
@@ -49,35 +49,45 @@ const WorkSection: React.FC = () => {
               }}
             />
           ) : ( */}
- <>
-  I build software across both web and mobile platforms, with experience spanning frontend engineering, mobile development, and AI-driven interfaces. <br />
-  Currently, I’m focused on creating intelligent user-facing systems — emphasizing clean UI, performance, and scalable architectures using TypeScript, React, React Native, and AI APIs. <br />
-  
-  I’ve been working on both the web and mobile versions of{' '}
-  <strong> <Link href="https://nuwellai.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"> NuWell AI</Link></strong>, a health and nutrition platform that leverages Artificial Intelligence for intelligent meal recommendations. <br />
-  
- 
-  You will always find me building things that will make our day to day lives easier. I have experience working with several startups and projects and have been able to contribute to their success.  <br />
-  
-  For more details, see my{' '}
-  <Link
-    href="/resumes.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"
-  >
-    CV
-  </Link>
-  .
-</>
+          <>
+            My goal is to design and build intelligent systems at the intersection of{" "}
+            <strong>AI, Data, and Software</strong>. <br />
+            My work spans frontend, mobile, and machine learning — with a strong focus on{" "}
+            <strong>scalable AI-driven interfaces</strong> and{" "}
+            <strong>data-powered decision systems</strong>. PS: I know a little about Blockchain.<br />
+
+{" "} <br />
+            Currently, I am learning Data science while building{" "}
+            <strong>
+              <Link
+                href="https://nuwellai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-500 hover:underline"
+              >
+                NuWell AI
+              </Link>
+            </strong>
+            , a nutrition and well-being platform that applies{" "}
+            <strong>AI + statistics</strong> for smart food recommendations. <br />
+
+            For more details, check my{" "}
+            <Link
+              href="/resumes.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-500 hover:underline"
+            >
+              CV
+            </Link>
+            .
+          </>
+
           {/* )} */}
         </p>
       </div>
 
-     
+
     </div>
   );
 };
