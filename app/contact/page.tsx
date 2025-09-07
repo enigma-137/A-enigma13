@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
             {showEmailInput && (
               <>
                 {isClient && (
-                  <div className="text-xl font-mono text-white">
+                  <div className="text-xl font-mono">
                     <Typewriter
                       words={["Now enter your email?"]}
                       loop={1}
