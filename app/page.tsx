@@ -116,10 +116,11 @@ export default function Portfolio() {
         {/* Profile Section */}
         <div className="text-left mb-6">
           <h2 className="text-lg font-bold mb-2">Hello,
-            I'm <span className="animate-pulse">ENIGMA.</span>
+         I am <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-  I'm a software developer passionate about crafting modern frontend architectures and intelligent digital experiences. I specialize in building scalable, interactive software applications and enjoy experimenting with AI, ML, and automation tools. My work explores how code can solve real-world problems and push the boundaries of what's possible with software.
+  A software developer who is more about crafting modern frontend architectures and intelligent digital experiences. 
+  I specialize in building scalable, interactive software applications and enjoy experimenting with AI, and ML. My work explores how code can solve real-world problems and push the boundaries of what's possible with software.
 </p>
 
         </div>

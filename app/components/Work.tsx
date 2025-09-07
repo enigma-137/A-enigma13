@@ -57,29 +57,10 @@ const WorkSection: React.FC = () => {
   <strong> <Link href="https://nuwellai.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"> NuWell AI</Link></strong>, a health and nutrition platform that leverages computer vision and intelligent recommendations. <br />
+    className="text-sky-500 hover:underline"> NuWell AI</Link></strong>, a health and nutrition platform that leverages Artificial Intelligence for intelligent meal recommendations. <br />
   
-  I started out at{' '}
-  <Link
-    href="https://superex.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"
-  >
-    SuperEX NG
-  </Link>
-  , where I contributed as a frontend mobile developer — building and maintaining core features of their mobile application. <br />
-  
-  I have also worked at{' '}
-  <Link
-    href="https://jojo.exchange/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sky-500 hover:underline"
-  >
-    Jojo Exchange
-  </Link>{' '}
-  as an AI Development Assistant, exploring how AI can improve decentralized trading experiences. <br />
+ 
+  You will always find me building things that will make our day to day lives easier. I have experience working with several startups and projects and have been able to contribute to their success.  <br />
   
   For more details, see my{' '}
   <Link

@@ -1,17 +1,15 @@
-import { Inter, Poppins } from "next/font/google";
+import { Special_Elite } from "next/font/google";
 import type { Metadata } from "next";
 import { ThemeProvider } from "./components/theme-provider";
 import "./globals.css";
 import { BookOpenText, Home, MailIcon } from "lucide-react";
 import Link from "next/link";
 
-
-const inter = Inter({
+const specialElite = Special_Elite({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700"], 
+  weight: "400", // Only one weight available
+  variable: "--font-special-elite",
 });
-
 
 export const metadata: Metadata = {
   title: "Enigma",
@@ -26,14 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Favicon links */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${inter.variable} antialiased`} 
+        className={`${specialElite.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

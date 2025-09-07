@@ -13,6 +13,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "email-password-validator": "^1.0.1",
     "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.3.0",
     "framer-motion": "^11.11.7",
