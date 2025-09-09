@@ -54,7 +54,7 @@ const WorkSection: React.FC = () => {
             <strong>AI, Data, and Software</strong>. <br />
             My work spans frontend, mobile, and machine learning — with a strong focus on{" "}
             <strong>scalable AI-driven interfaces</strong> and{" "}
-            <strong>data-powered decision systems</strong>. PS: I know a little about Blockchain.<br />
+            <strong>data-powered decision systems</strong>. <br /> PS: I know a little about Blockchain.<br />
 
 {" "} <br />
             Currently, I am learning Data science while building{" "}
