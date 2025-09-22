@@ -15,6 +15,8 @@ interface Project {
   users: string;
   stars: number;
   link: string;
+  image: string;
+  description: string;
 }
 
 export default function Portfolio() {
@@ -38,27 +40,64 @@ export default function Portfolio() {
     return () => clearInterval(timer);
   }, []);
 
-  const featuredProjects: Project[] = [
-    {
-      name: 'Nuwell AI',
-      users: '400+/month',
-      stars: 3,
-      link: 'nuwellai.com/',
-    },
-    {
-      name: 'FST-Cloud',
-      users: '120+/month',
-      stars: 1,
-      link: 'https://fst-cloud.vercel.app/',
-    },
-        {
-      name: 'Spotivibes',
-      users: '18+/month',
-      stars: 1,
-      link: 'http://spotivibes-x.vercel.app/',
-    },
+const featuredProjects: Project[] = [
+  {
+    name: "Nuwell AI",
+    users: "700+/month",
+    stars: 3,
+    link: "https://nuwellai.com/",
+    image: "/projects/nuwell.png",
+    description:
+      "Nuwell AI is an advanced nutrition and calorie tracking application designed to help users build healthier eating habits. It combines AI-powered food recognition, personalized meal recommendations, and detailed nutritional analysis to guide users toward their health goals. With features like barcode scanning, recipe suggestions, and an AI diet coach, Nuwell makes nutrition management simple, accurate, and accessible to everyone."
+  },
+  {
+    name: "Medimind",
+    users: "40+/month",
+    stars: 3,
+    link: "https://mediminds.netlify.app/",
+    image: "/projects/medimind.png",
+    description:
+      "Medimind. A multi-tenant healthcare platform that connects hospitals, doctors, and patients in one integrated system. It supports appointment scheduling, patient record management, and doctor-patient communication, making healthcare delivery more efficient. The app provides a secure environment where hospitals can manage their workflows, doctors can track patient histories, and patients can easily access medical services from anywhere."
+  },
+  {
+    name: "Awaclinic",
+    users: "10+/month",
+    stars: 3,
+    link: "https://nuwellai.com/",
+    image: "/projects/awaclinic.png",
+    description:
+      "Awaclinic. A multilingual, local voice-powered health assistant designed to make medical guidance more accessible. Built with speech recognition technology, it enables users to interact in their native languages and receive instant health support. The platform bridges language barriers in healthcare, allowing rural and urban communities alike to access vital information and connect with medical professionals with ease."
+  },
+  {
+    name: "Solar Bridge",
+    users: "00+/month",
+    stars: 3,
+    link: "https://solarbridge.vercel.app/",
+    image: "/projects/solar.png",
+    description:
+      "Solar Bridge is a platform we are building for monitoring and tracking solar equipment usage. It provides real-time insights into energy output, system performance, and equipment efficiency, helping users optimize their solar infrastructure. Whether for small-scale installations or larger solar farms, Solar Bridge ensures better maintenance, cost savings, and reliable clean energy management."
+  },
+  {
+    name: "FST-Cloud",
+    users: "200+/month",
+    stars: 1,
+    link: "https://fst-cloud.vercel.app/",
+    image: "/projects/cloud.png",
+    description:
+      "FST-Cloud is a cloud-based collaboration tool designed for students to upload, share, and download academic materials. The platform organizes PDFs and documents by subject and category, making it easy for learners to find the resources they need. With a clean interface and fast retrieval system, FST-Cloud encourages knowledge sharing and supports academic growth within student communities."
+  },
+  {
+    name: "Spotivibes",
+    users: "89+/month",
+    stars: 1,
+    link: "http://spotivibes-x.vercel.app/",
+    image: "/projects/sportivibe.png",
+    description:
+      "Spotivibes is a music streaming web app inspired by Spotify, offering playlist creation, discovery, and playback features. Users can explore curated tracks, build their own playlists, and enjoy a smooth listening experience directly from the browser. It demonstrates how modern frontend development can be applied to deliver engaging, music-focused digital experiences."
+  },
+];
 
-  ];
+
 
   if (!mounted) return null;
 

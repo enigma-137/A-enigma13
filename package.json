@@ -11,6 +11,7 @@
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-spring/web": "^9.7.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "email-password-validator": "^1.0.1",
@@ -26,7 +27,9 @@
     "react-hook-form": "^7.53.0",
     "react-intersection-observer": "^9.14.0",
     "react-simple-typewriter": "^5.0.1",
+    "react-swipe-card": "^0.1.4",
     "react-tilt": "^1.0.2",
+    "react-tinder-card": "^1.6.4",
     "react-toastify": "^10.0.5",
     "react-typewriter-effect": "^1.1.0",
     "simple-icons": "^13.13.0",
