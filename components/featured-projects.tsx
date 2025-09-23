@@ -53,9 +53,9 @@ const Card = ({
       const parentWidth = parentElement.getBoundingClientRect().width;
       const childWidth = cardRef.current.getBoundingClientRect().width;
       
-      return dir === "left" 
-        ? -(parentWidth / 2 + childWidth / 2) 
-        : (parentWidth / 2 + childWidth / 2);
+      return dir === "left"
+        ? -(parentWidth + childWidth)
+        : (parentWidth + childWidth);
     };
 
     if (direction && Math.abs(velocity || 0) > min) {
@@ -183,7 +183,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   />
 
                   {/* Content layer */}
-                  <div className="relative z-10 p-2 flex flex-col h-full" onClick={() => window.open(project.link, "_blank")}>
+                  <div className="relative z-10 p-2 flex flex-col h-full">
                     {project.image && (
                       <div
                         className="w-full h-40 rounded-lg bg-contain sepia-[0.5] bg-center mb-4 shadow-md border"
@@ -202,7 +202,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       {project.description || "No description available."}
                     </p>
 
-                    <div className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30">
+                    <div className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30"  onClick={() => window.open(project.link, "_blank")}>
                       <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
                         <Users className="h-4 w-4" /> 
                         <span className="font-semibold">{project.users}</span>
