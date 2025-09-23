@@ -83,7 +83,7 @@ const Card = ({
       dragElastic={0.6}
       style={{ x, rotate }}
       onDrag={getTrajectory}
-      onDragEnd={() => flyAway(300)}
+      onDragEnd={() => flyAway(100)}
       whileTap={{ scale: canSwipe ? 1.02 : 1 }}
     >
       {children}

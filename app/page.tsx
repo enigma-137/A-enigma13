@@ -134,7 +134,7 @@ const featuredProjects: Project[] = [
          I am <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-  A random software guy who is more about crafting modern and intelligent digital products. 
+  A random software guy who loves crafting modern and intelligent digital products. 
  I explore how we can solve real-world problems and push the boundaries of what's possible with software.
 </p>
 
