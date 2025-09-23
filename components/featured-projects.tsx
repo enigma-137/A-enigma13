@@ -183,11 +183,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   />
 
                   {/* Content layer */}
-                  <div className="relative z-10 p-4 flex flex-col h-full">
+                  <div className="relative z-10 p-2 flex flex-col h-full" onClick={() => window.open(project.link, "_blank")}>
                     {project.image && (
                       <div
-                        className="w-full h-40 rounded-lg bg-cover bg-center mb-4 shadow-md border"
-                        style={{ 
+                        className="w-full h-40 rounded-lg bg-contain bg-center mb-4 shadow-md border"
+                        style={{
                           backgroundImage: `url(${project.image})`,
                           borderColor: 'rgba(139, 69, 19, 0.2)'
                         }}
