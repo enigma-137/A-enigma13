@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useAnimation,
+  useTransform,
+} from "framer-motion";
 import { Star, Users } from "lucide-react";
 
 interface Project {
@@ -17,58 +22,46 @@ interface FeaturedProjectsProps {
   projects: Project[];
 }
 
-const Card = ({ 
-  children, 
-  onSwipeComplete, 
-  canSwipe 
-}: { 
-  children: React.ReactNode; 
-  onSwipeComplete: () => void; 
+const Card = ({
+  children,
+  onSwipeComplete,
+  canSwipe,
+}: {
+  children: React.ReactNode;
+  onSwipeComplete: () => void;
   canSwipe: boolean;
 }) => {
   const cardRef = React.useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const controls = useAnimation();
   const [constrained, setConstrained] = useState(true);
-  const [direction, setDirection] = useState<"left" | "right" | undefined>(undefined);
-  const [velocity, setVelocity] = useState<number | undefined>(undefined);
 
-  const getDirection = () => {
-    return velocity && velocity >= 1 ? "right" : velocity && velocity <= -1 ? "left" : undefined;
-  };
-
-  const getTrajectory = () => {
-    setVelocity(x.getVelocity());
-    setDirection(getDirection());
-  };
-
-  const flyAway = (min: number) => {
-    const flyAwayDistance = (dir: string) => {
+  const flyAway = (dir: "left" | "right") => {
+    const flyAwayDistance = (dirLocal: "left" | "right") => {
       if (!cardRef.current) return 0;
-      
-      
+
       const parentElement = cardRef.current.parentElement;
       if (!parentElement) return 0;
-      
+
       const parentWidth = parentElement.getBoundingClientRect().width;
       const childWidth = cardRef.current.getBoundingClientRect().width;
-      
-      return dir === "left"
+
+      return dirLocal === "left"
         ? -(parentWidth + childWidth)
-        : (parentWidth + childWidth);
+        : parentWidth + childWidth;
     };
 
-    if (direction && (Math.abs(velocity || 0) > min || Math.abs(x.get()) > 50)) {
-      setConstrained(false);
-      controls.start({
-        x: flyAwayDistance(direction),
-        transition: { duration: 0.3 }
-      }).then(() => {
+    setConstrained(false);
+    controls
+      .start({
+        x: flyAwayDistance(dir),
+        transition: { duration: 0.3 },
+      })
+      .then(() => {
         x.set(0);
         setConstrained(true);
         onSwipeComplete();
       });
-    }
   };
 
   const rotate = useTransform(x, [-200, 200], [-15, 15]);
@@ -79,11 +72,34 @@ const Card = ({
       className="absolute w-full h-full"
       animate={controls}
       drag={canSwipe ? "x" : false}
-      dragConstraints={constrained ? { left: -200, right: 200, top: 0, bottom: 0 } : false}
+      dragConstraints={
+        constrained ? { left: -200, right: 200, top: 0, bottom: 0 } : false
+      }
       dragElastic={0.6}
       style={{ x, rotate }}
-      onDrag={getTrajectory}
-      onDragEnd={() => flyAway(100)}
+      onDragEnd={() => {
+        const currentVelocity = x.getVelocity();
+        const currentX = x.get();
+        const swipeThresholdDistance = 80; // px
+        const velocityThreshold = 50; // px/s
+
+        const shouldSwipeLeft =
+          currentX < -swipeThresholdDistance ||
+          currentVelocity <= -velocityThreshold;
+        const shouldSwipeRight =
+          currentX > swipeThresholdDistance ||
+          currentVelocity >= velocityThreshold;
+
+        if (canSwipe && (shouldSwipeLeft || shouldSwipeRight)) {
+          flyAway(shouldSwipeLeft ? "left" : "right");
+        } else {
+          controls.start({
+            x: 0,
+            rotate: 0,
+            transition: { type: "spring", stiffness: 300, damping: 30 },
+          });
+        }
+      }}
       whileTap={{ scale: canSwipe ? 1.02 : 1 }}
     >
       {children}
@@ -92,32 +108,40 @@ const Card = ({
 };
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
-  const initialProjects = projects.length > 0 ? projects : [
-    {
-      name: "Nuwell AI Recipes",
-      users: "15k+",
-      stars: 4.8,
-      link: "#",
-      description: "AI-powered nutrition and calorie tracking collaboration platform for food science",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=160&fit=crop"
-    },
-    {
-      name: "Spotify Music App", 
-      users: "500M+",
-      stars: 4.5,
-      link: "#",
-      description: "Spotify-inspired music app for playlist students",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=160&fit=crop"
-    },
-    {
-      name: "Weather Dashboard",
-      users: "2M+",
-      stars: 4.2,
-      link: "#",
-      description: "Modern weather tracking with beautiful visualizations",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=160&fit=crop"
-    }
-  ];
+  const initialProjects =
+    projects.length > 0
+      ? projects
+      : [
+          {
+            name: "Nuwell AI Recipes",
+            users: "15k+",
+            stars: 4.8,
+            link: "#",
+            description:
+              "AI-powered nutrition and calorie tracking collaboration platform for food science",
+            image:
+              "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=160&fit=crop",
+          },
+          {
+            name: "Spotify Music App",
+            users: "500M+",
+            stars: 4.5,
+            link: "#",
+            description: "Spotify-inspired music app for playlist students",
+            image:
+              "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=160&fit=crop",
+          },
+          {
+            name: "Weather Dashboard",
+            users: "2M+",
+            stars: 4.2,
+            link: "#",
+            description:
+              "Modern weather tracking with beautiful visualizations",
+            image:
+              "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=160&fit=crop",
+          },
+        ];
 
   const [cards, setCards] = useState<Project[]>(initialProjects);
 
@@ -133,7 +157,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         {reversedCards.map((project, index) => {
           const canSwipe = index === reversedCards.length - 1;
           const stackIndex = reversedCards.length - 1 - index;
-          
+
           return (
             <motion.div
               key={`${project.name}-${cards.indexOf(project)}`}
@@ -146,23 +170,23 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 y: stackIndex * 6,
                 opacity: 1,
               }}
-              transition={{ 
+              transition={{
                 duration: 0.3,
-                ease: "easeOut"
+                ease: "easeOut",
               }}
             >
               <Card onSwipeComplete={handleSwipeComplete} canSwipe={canSwipe}>
                 <div className="relative w-full p-3 rounded-xl shadow-2xl overflow-hidden">
                   {/* Solid background layer to prevent transparency */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-xl"
                     style={{
-                      backgroundColor: '#f7f3ed',
+                      backgroundColor: "#f7f3ed",
                     }}
                   />
-                  
+
                   {/* Paper texture overlay */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-xl opacity-40"
                     style={{
                       backgroundImage: `
@@ -174,11 +198,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   />
 
                   {/* Subtle noise texture */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-xl opacity-10"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' result='noiseBase'/%3E%3CfeColorMatrix in='noiseBase' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E")`,
-                      backgroundSize: '150px 150px'
+                      backgroundSize: "150px 150px",
                     }}
                   />
 
@@ -189,7 +213,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                         className="w-full h-40 rounded-lg bg-contain sepia-[0.5] bg-center mb-4 shadow-md border"
                         style={{
                           backgroundImage: `url(${project.image})`,
-                          borderColor: 'rgba(139, 69, 19, 0.2)'
+                          borderColor: "rgba(139, 69, 19, 0.2)",
                         }}
                       />
                     )}
@@ -197,34 +221,41 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                     <h4 className="text-2xl font-serif font-bold mb-2 text-gray-900 leading-tight">
                       {project.name}
                     </h4>
-                    
+
                     <p className="text-xs text-gray-700 leading-relaxed font-medium">
                       {project.description || "No description available."}
                     </p>
 
-                    <div className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30"  onClick={() => window.open(project.link, "_blank")}>
+                    <div
+                      className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30"
+                      onClick={() => window.open(project.link, "_blank")}
+                    >
                       <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
-                        <Users className="h-4 w-4" /> 
+                        <Users className="h-4 w-4" />
                         <span className="font-semibold">{project.users}</span>
                       </span>
                       <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
-                        <Star className="h-4 w-4" fill="#F59E0B" stroke="#F59E0B" /> 
+                        <Star
+                          className="h-4 w-4"
+                          fill="#F59E0B"
+                          stroke="#F59E0B"
+                        />
                         <span className="font-semibold">{project.stars}</span>
                       </span>
                     </div>
                   </div>
 
                   {/* Enhanced border and shadow */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-xl pointer-events-none"
                     style={{
-                      border: '1px solid rgba(139, 69, 19, 0.15)',
+                      border: "1px solid rgba(139, 69, 19, 0.15)",
                       boxShadow: `
                         0 25px 50px -12px rgba(0, 0, 0, 0.15),
                         0 10px 20px -5px rgba(139, 69, 19, 0.08),
                         inset 0 1px 0 rgba(255, 255, 255, 0.4),
                         inset 0 -1px 0 rgba(139, 69, 19, 0.05)
-                      `
+                      `,
                     }}
                   />
                 </div>
@@ -233,16 +264,18 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           );
         })}
       </div>
-      
+
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-gray-600">
-        <p className="text-sm font-medium">Swipe left or right to browse projects</p>
+        <p className="text-sm font-medium">
+          Swipe left or right to browse projects
+        </p>
         <div className="flex gap-2 mt-2 justify-center">
           {cards.map((_, i) => (
             <div
               key={i}
               className="w-2 h-2 rounded-full bg-gray-300"
               style={{
-                backgroundColor: i === 0 ? '#F59E0B' : '#D1D5DB'
+                backgroundColor: i === 0 ? "#F59E0B" : "#D1D5DB",
               }}
             />
           ))}
