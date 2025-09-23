@@ -58,7 +58,7 @@ const Card = ({
         : (parentWidth + childWidth);
     };
 
-    if (direction && (Math.abs(velocity || 0) > min || Math.abs(x.get()) > 100)) {
+    if (direction && (Math.abs(velocity || 0) > min || Math.abs(x.get()) > 50)) {
       setConstrained(false);
       controls.start({
         x: flyAwayDistance(direction),
@@ -79,7 +79,7 @@ const Card = ({
       className="absolute w-full h-full"
       animate={controls}
       drag={canSwipe ? "x" : false}
-      dragConstraints={constrained ? { left: -50, right: 50, top: 0, bottom: 0 } : false}
+      dragConstraints={constrained ? { left: -200, right: 200, top: 0, bottom: 0 } : false}
       dragElastic={0.6}
       style={{ x, rotate }}
       onDrag={getTrajectory}
@@ -129,7 +129,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
   return (
     <div className="flex justify-center items-center  bg-gradient-to-br  p-4">
-      <div className="relative w-[320px] h-[500px]">
+      <div className="relative w-[400px] h-[500px]">
         {reversedCards.map((project, index) => {
           const canSwipe = index === reversedCards.length - 1;
           const stackIndex = reversedCards.length - 1 - index;
