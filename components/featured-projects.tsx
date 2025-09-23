@@ -58,7 +58,7 @@ const Card = ({
         : (parentWidth + childWidth);
     };
 
-    if (direction && Math.abs(velocity || 0) > min) {
+    if (direction && (Math.abs(velocity || 0) > min || Math.abs(x.get()) > 100)) {
       setConstrained(false);
       controls.start({
         x: flyAwayDistance(direction),
