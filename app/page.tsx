@@ -48,7 +48,7 @@ const featuredProjects: Project[] = [
     link: "https://nuwellai.com/",
     image: "/projects/nuwell.png",
     description:
-      "Nuwell AI is an advanced nutrition and calorie tracking application designed to help users build healthier eating habits. It combines AI-powered food recognition, personalized meal recommendations, and detailed nutritional analysis to guide users toward their health goals. With features like barcode scanning, recipe suggestions, and an AI diet coach, Nuwell makes nutrition management simple, accurate, and accessible to everyone."
+      "Nuwell AI is an advanced nutrition and calorie tracking application designed to help users build healthier eating habits. It combines AI-powered food recognition, personalized meal recommendations, and detailed nutritional analysis to guide users toward their health goals. With features like modern calorie tracking, recipe suggestions, and an AI diet coach, Nuwell makes nutrition management simple, accurate, and accessible to everyone."
   },
   {
     name: "Medimind",

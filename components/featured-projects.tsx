@@ -186,7 +186,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <div className="relative z-10 p-4 flex flex-col h-full">
                     {project.image && (
                       <div
-                        className="w-full h-40 rounded-lg bg-cover  bg-center mb-4 shadow-md border"
+                        className="w-full h-40 rounded-lg bg-cover bg-center mb-4 shadow-md border"
                         style={{ 
                           backgroundImage: `url(${project.image})`,
                           borderColor: 'rgba(139, 69, 19, 0.2)'
@@ -198,7 +198,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       {project.name}
                     </h4>
                     
-                    <p className="text-sm text-gray-700 mb-4 leading-relaxed flex-grow font-medium">
+                    <p className="text-xs text-gray-700 mb-4 leading-relaxed flex-grow font-medium">
                       {project.description || "No description available."}
                     </p>
 
