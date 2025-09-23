@@ -128,7 +128,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const reversedCards = cards.slice().reverse();
 
   return (
-    <div className="flex justify-center items-center min-h-[80vh] bg-gradient-to-br  p-4">
+    <div className="flex justify-center items-center  bg-gradient-to-br  p-4">
       <div className="relative w-[320px] h-[500px]">
         {reversedCards.map((project, index) => {
           const canSwipe = index === reversedCards.length - 1;
@@ -152,7 +152,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               }}
             >
               <Card onSwipeComplete={handleSwipeComplete} canSwipe={canSwipe}>
-                <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden">
+                <div className="relative w-full p-3 rounded-xl shadow-2xl overflow-hidden">
                   {/* Solid background layer to prevent transparency */}
                   <div 
                     className="absolute inset-0 rounded-xl"
@@ -186,7 +186,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <div className="relative z-10 p-2 flex flex-col h-full" onClick={() => window.open(project.link, "_blank")}>
                     {project.image && (
                       <div
-                        className="w-full h-40 rounded-lg bg-contain bg-center mb-4 shadow-md border"
+                        className="w-full h-40 rounded-lg bg-contain sepia-[0.5] bg-center mb-4 shadow-md border"
                         style={{
                           backgroundImage: `url(${project.image})`,
                           borderColor: 'rgba(139, 69, 19, 0.2)'
@@ -198,11 +198,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       {project.name}
                     </h4>
                     
-                    <p className="text-xs text-gray-700 mb-4 leading-relaxed flex-grow font-medium">
+                    <p className="text-xs text-gray-700 leading-relaxed font-medium">
                       {project.description || "No description available."}
                     </p>
 
-                    <div className="flex justify-between items-center text-sm text-gray-800 mt-auto pt-4 border-t border-gray-300/30">
+                    <div className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30">
                       <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
                         <Users className="h-4 w-4" /> 
                         <span className="font-semibold">{project.users}</span>
