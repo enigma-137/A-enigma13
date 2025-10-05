@@ -134,7 +134,7 @@ export default function Portfolio() {
             I am <span className="animate-pulse">ENIGMA.</span>
           </h2>
           <p className="text-sm font-sans">
-            A software guy in love with building intelligent products.
+            {/* A software guy in love with building intelligent products. */}
             I am on a mission to explore how we can solve real-world problems and push the boundaries of what's possible with software.
           </p>
 
