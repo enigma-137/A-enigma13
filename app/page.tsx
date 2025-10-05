@@ -68,15 +68,15 @@ const featuredProjects: Project[] = [
     description:
       "Multilingual voice-powered health assistant using speech recognition for accessible medical guidance in native languages."
   },
-  {
-    name: "Solar Bridge",
-    users: "00+/month",
-    stars: 3,
-    link: "https://solarbridge.vercel.app/",
-    image: "/projects/solar.png",
-    description:
-      "Solar equipment monitoring platform providing real-time insights on energy output, performance, and efficiency for optimization."
-  },
+  // {
+  //   name: "Solar Bridge",
+  //   users: "00+/month",
+  //   stars: 3,
+  //   link: "https://solarbridge.vercel.app/",
+  //   image: "/projects/solar.png",
+  //   description:
+  //     "Solar equipment monitoring platform providing real-time insights on energy output, performance, and efficiency for optimization."
+  // },
   {
     name: "FST-Cloud",
     users: "200+/month",
