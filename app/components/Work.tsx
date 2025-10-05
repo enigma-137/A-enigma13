@@ -50,14 +50,14 @@ const WorkSection: React.FC = () => {
             />
           ) : ( */}
           <>
-            My goal is to design and build intelligent systems at the intersection of{" "}
+            I build and design intelligent systems at the intersection of{" "}
             <strong>AI, Data, and Software</strong>. <br />
-            My work spans frontend, mobile, and machine learning — with a strong focus on{" "}
+            My work spans frontend, mobile, and some backend — with a strong focus on{" "}
             <strong>scalable AI-driven interfaces</strong> and{" "}
-            <strong>data-powered decision systems</strong>. <br /> PS: I know a little about Blockchain.<br />
+            <strong>data-powered decision systems</strong>. <br /> PS: I know a little about Blockchain. yes!<br />
 
 {" "} <br />
-            Currently, I am learning Data science while building{" "}
+            Currently, I am learning Data science even while building{" "}
             <strong>
               <Link
                 href="https://nuwellai.com"
