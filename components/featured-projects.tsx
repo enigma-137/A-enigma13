@@ -178,16 +178,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               <Card onSwipeComplete={handleSwipeComplete} canSwipe={canSwipe}>
                 <div className="relative w-full p-3 rounded-xl shadow-2xl overflow-hidden">
                   {/* Solid background layer to prevent transparency */}
-                  <div
-                    className="absolute inset-0 rounded-xl"
-                    style={{
-                      backgroundColor: "#f7f3ed",
-                    }}
-                  />
+                  <div className="absolute inset-0 rounded-xl bg-card" />
 
                   {/* Paper texture overlay */}
                   <div
-                    className="absolute inset-0 rounded-xl opacity-40"
+                    className="absolute inset-0 rounded-xl opacity-40 dark:opacity-0"
                     style={{
                       backgroundImage: `
                         radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
@@ -210,31 +205,31 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <div className="relative z-10 p-2 flex flex-col h-full">
                     {project.image && (
                       <div
-                        className="w-full h-40 rounded-lg bg-contain sepia-[0.5] bg-center mb-4 shadow-md border"
+                        className="w-full h-40 rounded-lg bg-contain  sepia-[0.5] bg-center mb-4 shadow-md border"
                         style={{
                           backgroundImage: `url(${project.image})`,
-                          borderColor: "rgba(139, 69, 19, 0.2)",
                         }}
+                        // className="border"
                       />
                     )}
 
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-gray-900 leading-tight">
+                    <h4 className="text-2xl font-serif font-bold mb-2 text-card-foreground leading-tight">
                       {project.name}
                     </h4>
 
-                    <p className="text-xs text-gray-700 leading-relaxed font-medium">
+                    <p className="text-xs text-muted-foreground leading-relaxed font-medium">
                       {project.description || "No description available."}
                     </p>
 
                     <div
-                      className="flex justify-between pt-4 items-center text-sm text-gray-800 mt-auto border-t border-gray-300/30"
+                      className="flex justify-between pt-4 items-center text-sm text-card-foreground mt-auto border-t border-border/30"
                       onClick={() => window.open(project.link, "_blank")}
                     >
-                      <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
+                      <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
                         <Users className="h-4 w-4" />
                         <span className="font-semibold">{project.users}</span>
                       </span>
-                      <span className="flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full">
+                      <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
                         <Star
                           className="h-4 w-4"
                           fill="#F59E0B"
@@ -247,14 +242,13 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                   {/* Enhanced border and shadow */}
                   <div
-                    className="absolute inset-0 rounded-xl pointer-events-none"
+                    className="absolute inset-0 rounded-xl pointer-events-none border"
                     style={{
-                      border: "1px solid rgba(139, 69, 19, 0.15)",
                       boxShadow: `
                         0 25px 50px -12px rgba(0, 0, 0, 0.15),
-                        0 10px 20px -5px rgba(139, 69, 19, 0.08),
+                        0 10px 20px -5px hsl(var(--muted)),
                         inset 0 1px 0 rgba(255, 255, 255, 0.4),
-                        inset 0 -1px 0 rgba(139, 69, 19, 0.05)
+                        inset 0 -1px 0 hsl(var(--border))
                       `,
                     }}
                   />
@@ -265,7 +259,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         })}
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-gray-600">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-muted-foreground">
         <p className="text-sm font-medium">
           Swipe left or right to browse projects
         </p>
@@ -273,9 +267,9 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           {cards.map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 rounded-full bg-gray-300"
+              className="w-2 h-2 rounded-full bg-muted"
               style={{
-                backgroundColor: i === 0 ? "#F59E0B" : "#D1D5DB",
+                backgroundColor: i === 0 ? "#F59E0B" : "hsl(var(--muted))",
               }}
             />
           ))}
