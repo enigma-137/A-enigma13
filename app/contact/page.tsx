@@ -110,7 +110,7 @@ const ContactForm: React.FC = () => {
                   {isClient && (
                     <div className="text-xl font-mono mb-4">
                       <Typewriter
-                        words={["Now enter your email?"]}
+                        words={["Now please enter your email"]}
                         loop={1}
                         cursor
                         cursorStyle="_"
