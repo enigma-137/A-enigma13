@@ -86,11 +86,20 @@ export default function Portfolio() {
       description:
         "An autonomous AI agent on X for real time crypto updates and insights."
     },
+        {
+      name: "Ghost followers and X circle",
+      users: "",
+      stars: 0,
+      link: "https://twitter0-apps.vercel.app/",
+      image: "/projects/ghost.png",
+      description:
+        "A tool to identify ghost followers and manage X Circle for enhanced social media engagement and audience insights."
+    },
     {
       name: "FST-Cloud",
       users: "345+",
       stars: 2,
-      link: "https://fst-cloud.vercel.app/",
+      link: "/#",
       image: "/projects/cloud.png",
       description:
         "Cloud-based collaboration tool for students to share and organize academic materials by subject and category."
