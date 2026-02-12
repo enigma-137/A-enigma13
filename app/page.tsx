@@ -43,7 +43,7 @@ export default function Portfolio() {
   const featuredProjects: Project[] = [
     {
       name: "Nuwell AI",
-      users: "700+/month",
+      users: "",
       stars: 3,
       link: "https://nuwellai.com/",
       image: "/projects/nuwell.png",
@@ -52,7 +52,7 @@ export default function Portfolio() {
     },
     {
       name: "Medimind",
-      users: "40+/month",
+      users: "",
       stars: 3,
       link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
@@ -61,7 +61,7 @@ export default function Portfolio() {
     },
     {
       name: "Awaclinic",
-      users: "+/month",
+      users: "",
       stars: 3,
       link: "https://awaclinic.vercel.app/",
       image: "/projects/awaclinic.png",
@@ -70,8 +70,8 @@ export default function Portfolio() {
     },
     {
       name: "Type Race",
-      users: "00+/month",
-      stars: 3,
+      users: "~150",
+      stars: 2,
       link: "https://typespace.pxxl.click",
       image: "/projects/typerace.png",
       description:
@@ -79,7 +79,7 @@ export default function Portfolio() {
     },
     {
       name: "FST-Cloud",
-      users: "200+/month",
+      users: "345+/month",
       stars: 1,
       link: "https://fst-cloud.vercel.app/",
       image: "/projects/cloud.png",
@@ -88,8 +88,8 @@ export default function Portfolio() {
     },
     {
       name: "GitHub worth",
-      users: "89+/month",
-      stars: 1,
+      users: "3000+",
+      stars: 7,
       link: "https://github-worth.pxxl.click/",
       image: "/projects/github-worth.png",
       description:
@@ -128,7 +128,7 @@ export default function Portfolio() {
 
         </div>
 
-        {/* Profile Section */}
+    
         <div className="text-left mb-6">
           <h2 className="text-lg font-bold mb-2">Hello,
             I am <span className="animate-pulse">ENIGMA.</span>
@@ -147,7 +147,7 @@ export default function Portfolio() {
         <p className='text-xs italic'>swipe cards</p>
         <FeaturedProjects projects={featuredProjects} />
 
-        {/* Connect Section */}
+      
         <div className='py-2'>
           <h2 className="text-lg font-bold">
             Connect.
