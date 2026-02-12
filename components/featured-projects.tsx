@@ -225,10 +225,15 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       className="flex justify-between pt-4 items-center text-sm text-card-foreground mt-auto border-t border-border/30"
                       onClick={() => window.open(project.link, "_blank")}
                     >
-                      <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
+                      
+                       {project.users !== "" && (<>
+                       <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
                         <Users className="h-4 w-4" />
-                        <span className="font-semibold">{project.users}</span>
-                      </span>
+                    <span className="font-semibold">{project.users}</span>
+                    </span>
+                       </>  )}
+                        {/* <span className="font-semibold">{project.users}</span> */}
+                    
                       <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
                         <Star
                           className="h-4 w-4"
