@@ -54,29 +54,29 @@ export default function Portfolio() {
       name: "Medimind",
       users: "40+/month",
       stars: 3,
-      link: "https://mediminds.netlify.app/",
+      link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
       description:
         "Multi-tenant healthcare platform connecting hospitals, doctors, and patients with appointment scheduling and record management."
     },
     {
       name: "Awaclinic",
-      users: "10+/month",
+      users: "+/month",
       stars: 3,
-      link: "https://nuwellai.com/",
+      link: "https://awaclinic.vercel.app/",
       image: "/projects/awaclinic.png",
       description:
         "Multilingual voice-powered health assistant using speech recognition for accessible medical guidance in native languages."
     },
-    // {
-    //   name: "Solar Bridge",
-    //   users: "00+/month",
-    //   stars: 3,
-    //   link: "https://solarbridge.vercel.app/",
-    //   image: "/projects/solar.png",
-    //   description:
-    //     "Solar equipment monitoring platform providing real-time insights on energy output, performance, and efficiency for optimization."
-    // },
+    {
+      name: "Type Race",
+      users: "00+/month",
+      stars: 3,
+      link: "https://typespace.pxxl.click",
+      image: "/projects/typerace.png",
+      description:
+        "A typing speed test application that challenges users to type as fast as they can. with multiplayer mode and real-time leaderboards to compete with friends and other users worldwide."
+    },
     {
       name: "FST-Cloud",
       users: "200+/month",
@@ -87,13 +87,13 @@ export default function Portfolio() {
         "Cloud-based collaboration tool for students to share and organize academic materials by subject and category."
     },
     {
-      name: "Spotivibes",
+      name: "GitHub worth",
       users: "89+/month",
       stars: 1,
-      link: "http://spotivibes-x.vercel.app/",
-      image: "/projects/sportivibe.png",
+      link: "https://github-worth.pxxl.click/",
+      image: "/projects/github-worth.png",
       description:
-        "Spotify-inspired music streaming web app with playlist creation, track discovery, and smooth browser playback."
+        "A tool to evaluate the worth of GitHub repositories based on various metrics."
     },
   ];
 
