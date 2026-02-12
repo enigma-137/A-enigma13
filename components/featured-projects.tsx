@@ -112,36 +112,36 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
     projects.length > 0
       ? projects
       : [
-          {
-            name: "Nuwell AI Recipes",
-            users: "15k+",
-            stars: 4.8,
-            link: "#",
-            description:
-              "AI-powered nutrition and calorie tracking collaboration platform for food science",
-            image:
-              "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=160&fit=crop",
-          },
-          {
-            name: "Spotify Music App",
-            users: "500M+",
-            stars: 4.5,
-            link: "#",
-            description: "Spotify-inspired music app for playlist students",
-            image:
-              "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=160&fit=crop",
-          },
-          {
-            name: "Weather Dashboard",
-            users: "2M+",
-            stars: 4.2,
-            link: "#",
-            description:
-              "Modern weather tracking with beautiful visualizations",
-            image:
-              "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=160&fit=crop",
-          },
-        ];
+        {
+          name: "Nuwell AI Recipes",
+          users: "15k+",
+          stars: 4.8,
+          link: "#",
+          description:
+            "AI-powered nutrition and calorie tracking collaboration platform for food science",
+          image:
+            "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=160&fit=crop",
+        },
+        {
+          name: "Spotify Music App",
+          users: "500M+",
+          stars: 4.5,
+          link: "#",
+          description: "Spotify-inspired music app for playlist students",
+          image:
+            "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=160&fit=crop",
+        },
+        {
+          name: "Weather Dashboard",
+          users: "2M+",
+          stars: 4.2,
+          link: "#",
+          description:
+            "Modern weather tracking with beautiful visualizations",
+          image:
+            "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=160&fit=crop",
+        },
+      ];
 
   const [cards, setCards] = useState<Project[]>(initialProjects);
 
@@ -209,7 +209,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                         style={{
                           backgroundImage: `url(${project.image})`,
                         }}
-                        // className="border"
+                      // className="border"
                       />
                     )}
 
@@ -225,23 +225,29 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       className="flex justify-between pt-4 items-center text-sm text-card-foreground mt-auto border-t border-border/30"
                       onClick={() => window.open(project.link, "_blank")}
                     >
-                      
-                       {project.users !== "" && (<>
-                       <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
-                        <Users className="h-4 w-4" />
-                    <span className="font-semibold">{project.users}</span>
-                    </span>
-                       </>  )}
-                        {/* <span className="font-semibold">{project.users}</span> */}
-                    
-                      <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
-                        <Star
-                          className="h-4 w-4"
-                          fill="#F59E0B"
-                          stroke="#F59E0B"
-                        />
-                        <span className="font-semibold">{project.stars}</span>
-                      </span>
+
+                      {project.users !== "" && (<>
+                        <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
+                          <Users className="h-4 w-4" />
+                          <span className="font-semibold">{project.users}</span>
+                        </span>
+                      </>)}
+                      {/* <span className="font-semibold">{project.users}</span> */}
+
+                      {project.stars > 0 && (
+
+                        <span className="flex items-center gap-1 bg-muted/50 px-2 py-1 rounded-full">
+                          <Star
+                            className="h-4 w-4"
+                            fill="#F59E0B"
+                            stroke="#F59E0B"
+                          />
+                          <span className="font-semibold">{project.stars}</span>
+                        </span>
+
+
+
+                      )}
                     </div>
                   </div>
 
