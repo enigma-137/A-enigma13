@@ -43,8 +43,8 @@ export default function Portfolio() {
   const featuredProjects: Project[] = [
     {
       name: "Nuwell AI",
-      users: "",
-      stars: 3,
+      users: "700+",
+      stars: 0,
       link: "https://nuwellai.com/",
       image: "/projects/nuwell.png",
       description:
@@ -53,7 +53,7 @@ export default function Portfolio() {
     {
       name: "Medimind",
       users: "",
-      stars: 3,
+      stars: 0,
       link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
       description:
@@ -62,7 +62,7 @@ export default function Portfolio() {
     {
       name: "Awaclinic",
       users: "",
-      stars: 3,
+      stars: 0,
       link: "https://awaclinic.vercel.app/",
       image: "/projects/awaclinic.png",
       description:
@@ -77,10 +77,19 @@ export default function Portfolio() {
       description:
         "A typing speed test application that challenges users to type as fast as they can. with multiplayer mode and real-time leaderboards to compete with friends and other users worldwide."
     },
+       {
+      name: "JOJO AGENT X",
+      users: "",
+      stars: 0,
+      link: "https://x.com/jojo_agent_x",
+      image: "/projects/jojo-x.png",
+      description:
+        "An autonomous AI agent on X for real time crypto updates and insights."
+    },
     {
       name: "FST-Cloud",
-      users: "345+/month",
-      stars: 1,
+      users: "345+",
+      stars: 2,
       link: "https://fst-cloud.vercel.app/",
       image: "/projects/cloud.png",
       description:
@@ -88,7 +97,7 @@ export default function Portfolio() {
     },
     {
       name: "GitHub worth",
-      users: "3000+",
+      users: "3K+",
       stars: 7,
       link: "https://github-worth.pxxl.click/",
       image: "/projects/github-worth.png",
