@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 const skills = [
   { name: "Python", image: "/python.jfif" },
   { name: "JavaScript", image: "/js.png" },
-  { name: "React", image: "/react.png" },
+  { name: "React/React Native", image: "/react.png" },
   { name: "Next.js", image: "/nextjs.png" },
   { name: "TypeScript", image: "/typescipt.png" },
   { name: "Rust", image: "/image.png" },
-  { name: "Jupyter", image: "/Jupyter_logo.svg.png" },
-  { name: "MongoDB", image: "/mongodb.png" },
-  { name: "Matplotlib", image: "/matplotlib.png" },
-  { name: "Seaborn", image: "/seaborn.png" },
-  { name: "Scikit-learn", image: "/skicit.png" },
-  { name: "NumPy", image: "/numpy.png" },
-  { name: "Pandas", image: "/pandas.png" },
+  // { name: "Jupyter", image: "/Jupyter_logo.svg.png" },
+  // { name: "MongoDB", image: "/mongodb.png" },
+  // { name: "Matplotlib", image: "/matplotlib.png" },
+  // { name: "Seaborn", image: "/seaborn.png" },
+  // { name: "Scikit-learn", image: "/skicit.png" },
+  // { name: "NumPy", image: "/numpy.png" },
+  // { name: "Pandas", image: "/pandas.png" },
 ];
 
 const SkillsSection: React.FC = () => {
