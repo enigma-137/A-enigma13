@@ -51,13 +51,16 @@ const WorkSection: React.FC = () => {
           ) : ( */}
           <>
             I build and design intelligent systems at the intersection of{" "}
-            <strong>AI, Data, and Software</strong>. <br />
-            My work spans frontend, mobile, and some backend — with a strong focus on{" "}
-            <strong>scalable AI-driven interfaces</strong> and{" "}
-            <strong>data-powered decision systems</strong>. <br /> PS: I know a little about Blockchain. yes!<br />
+            <strong>Rust, AI, and Software Engineering</strong>. <br />
+            My work spans frontend and backend — with a growing focus on{" "}
+            <strong>reliable systems programming</strong>,{" "}
+            <strong>AI-powered tools</strong>, and{" "}
+            <strong>performance-driven applications</strong>. <br />
+            PS: Yes, I understand Blockchain too. <br />
 
-{" "} <br />
-            Currently, I am learning Data science even while building{" "}
+            {" "} <br />
+            Currently, I’m deepening my expertise in{" "}
+            <strong>Rust and AI infrastructure</strong> while building{" "}
             <strong>
               <Link
                 href="https://nuwellai.com"
@@ -69,7 +72,7 @@ const WorkSection: React.FC = () => {
               </Link>
             </strong>
             , a nutrition and well-being platform that applies{" "}
-            <strong>AI + statistics</strong> for smart food recommendations. <br />
+            <strong>AI + structured data systems</strong> for smart food recommendations. <br />
 
             For more details, check my{" "}
             <Link

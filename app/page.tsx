@@ -151,11 +151,11 @@ export default function Portfolio() {
   <h2 className="text-lg font-bold mb-2">
     Hello, I am <span className="animate-pulse">Emmanuel.</span>
   </h2>
-  <p className="text-sm font-sans">
-    I am on a mission focused on building systems, Data, AI and blockchain infrastructures. 
-    I care about writing reliable software, designing thoughtful systems, 
-    and exploring how code can solve real-world problems with precision and clarity.
-  </p>
+ <p className="text-sm font-sans">
+  I&apos;m on a mission to grow into building reliable systems across Rust, AI, and blockchain.
+  As I learn and build, I focus on writing dependable software, designing thoughtful architectures,
+  and exploring how code can solve real-world problems with precision and clarity.
+</p>
 </div>
 
         <div className=''>
