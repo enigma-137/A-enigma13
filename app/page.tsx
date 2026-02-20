@@ -147,16 +147,16 @@ export default function Portfolio() {
         </div>
 
     
-        <div className="text-left mb-6">
-          <h2 className="text-lg font-bold mb-2">Hello,
-            I am <span className="animate-pulse">ENIGMA.</span>
-          </h2>
-          <p className="text-sm font-sans">
-            {/* A software guy in love with building intelligent products. */}
-            I am on a mission to explore how we can solve real-world problems and push the boundaries of what's possible with software.
-          </p>
-
-        </div>
+       <div className="text-left mb-6">
+  <h2 className="text-lg font-bold mb-2">
+    Hello, I am <span className="animate-pulse">Emmanuel.</span>
+  </h2>
+  <p className="text-sm font-sans">
+    I am focused on systems, Data, AI and building blockchain infrastructure. 
+    I care about writing reliable software, designing thoughtful systems, 
+    and exploring how code can solve real-world problems with precision and clarity.
+  </p>
+</div>
 
         <div className=''>
           <WorkSection />
