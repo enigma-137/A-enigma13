@@ -152,7 +152,7 @@ export default function Portfolio() {
     Hello, I am <span className="animate-pulse">Emmanuel.</span>
   </h2>
   <p className="text-sm font-sans">
-    I am focused on systems, Data, AI and building blockchain infrastructure. 
+    I am on a mission focused on building systems, Data, AI and blockchain infrastructures. 
     I care about writing reliable software, designing thoughtful systems, 
     and exploring how code can solve real-world problems with precision and clarity.
   </p>
