@@ -50,18 +50,9 @@ const WorkSection: React.FC = () => {
             />
           ) : ( */}
           <>
-            I build and design intelligent systems at the intersection of{" "}
-            <strong>Rust, AI, and Software Engineering</strong>. <br />
-            My work spans frontend and backend — with a growing focus on{" "}
-            <strong>reliable systems programming</strong>,{" "}
-            <strong>AI-powered tools</strong>, and{" "}
-            <strong>performance-driven applications</strong>. <br />
-            PS: Yes, I understand Blockchain too. <br />
-
-            {" "} <br />
-            Currently, I’m deepening my expertise in{" "}
-            <strong>Rust and AI infrastructure</strong> while building{" "}
-            <strong>
+            Software Engineer focused on <strong>Rust, AI, and Automation</strong>.
+            I build systems that scale and tools that solve problems. <br /><br />
+            Currently building <strong>
               <Link
                 href="https://nuwellai.com"
                 target="_blank"
@@ -70,20 +61,15 @@ const WorkSection: React.FC = () => {
               >
                 NuWell AI
               </Link>
-            </strong>
-            , a nutrition and well-being platform that applies{" "}
-            <strong>AI + structured data systems</strong> for smart food recommendations. <br />
-
-            For more details, check my{" "}
+            </strong>. <br /><br />
             <Link
               href="/resumes.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-500 hover:underline"
             >
-              CV
+              Resume
             </Link>
-            .
           </>
 
           {/* )} */}

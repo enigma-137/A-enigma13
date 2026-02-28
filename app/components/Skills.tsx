@@ -24,9 +24,7 @@ const SkillsSection: React.FC = () => {
       <div className="container">
         <h2 className="text-base font-bold mb-4 font-sans">Tools.</h2>
         <p className="text-muted-foreground text-sm mb-8 font-sans">
-          My primary stack focuses on Next.js, TypeScript, ShadCN UI, and
-          MongoDB and several others for frontend, and whatever technology is needed for AI/ML and DS. However, I adapt to different tools and technologies as
-          needed &lt; after all, they’re just tools :) &gt;
+          Next.js, TypeScript, Rust, and AI/ML. I pick the best tools for the job.
         </p>
 
         <div className="flex flex-wrap gap-2" style={{ perspective: '1000px' }}>

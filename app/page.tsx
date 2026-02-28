@@ -75,9 +75,9 @@ export default function Portfolio() {
       link: "https://typespace.pxxl.click",
       image: "/projects/typerace.png",
       description:
-        "A typing speed test application that challenges users to type as fast as they can. with multiplayer mode and real-time leaderboards to compete with friends and other users worldwide."
+        "Multiplayer typing speed test with real-time leaderboards."
     },
-       {
+    {
       name: "JOJO AGENT X",
       users: "",
       stars: 0,
@@ -86,14 +86,14 @@ export default function Portfolio() {
       description:
         "An autonomous AI agent on X for real time crypto updates and insights."
     },
-        {
+    {
       name: "Ghost followers and X circle",
       users: "",
       stars: 0,
       link: "https://twitter0-apps.vercel.app/",
       image: "/projects/ghost.png",
       description:
-        "A tool to identify ghost followers and manage X Circle for enhanced social media engagement and audience insights."
+        "Identify ghost followers and manage social circles for enhanced engagement."
     },
     {
       name: "FST-Cloud",
@@ -102,7 +102,7 @@ export default function Portfolio() {
       link: "/#",
       image: "/projects/cloud.png",
       description:
-        "Cloud-based collaboration tool for students to share and organize academic materials by subject and category."
+        "Academic material sharing and organization platform for students."
     },
     {
       name: "GitHub worth",
@@ -111,7 +111,7 @@ export default function Portfolio() {
       link: "https://github-worth.pxxl.click/",
       image: "/projects/github-worth.png",
       description:
-        "A tool to evaluate the worth of GitHub repositories based on various metrics."
+        "Evaluate GitHub repository value based on key metrics."
     },
   ];
 
@@ -146,17 +146,16 @@ export default function Portfolio() {
 
         </div>
 
-    
-       <div className="text-left mb-6">
-  <h2 className="text-lg font-bold mb-2">
-    Hello, I am <span className="animate-pulse">Emmanuel.</span>
-  </h2>
- <p className="text-sm font-sans">
-  I&apos;m on a mission to grow into building reliable systems across Rust, AI, and blockchain.
-  As I learn and build, I focus on writing dependable software, designing thoughtful architectures,
-  and exploring how code can solve real-world problems with precision and clarity.
-</p>
-</div>
+
+        <div className="text-left mb-6">
+          <h2 className="text-lg font-bold mb-2">
+            Hello, I am <span className="animate-pulse">Emmanuel.</span>
+          </h2>
+          <p className="text-sm font-sans">
+            Building reliable systems across Rust, AI, and blockchain.
+            Focused on architectural precision and software that works.
+          </p>
+        </div>
 
         <div className=''>
           <WorkSection />
@@ -165,13 +164,13 @@ export default function Portfolio() {
         <p className='text-xs italic'>swipe cards</p>
         <FeaturedProjects projects={featuredProjects} />
 
-      
+
         <div className='py-2'>
           <h2 className="text-lg font-bold">
             Connect.
           </h2>
           <p className="text-sm leading-relaxed mb-4 font-sans">
-            Feel free to reach out on any of these platforms:
+            Find me on:
           </p>
           <div className="flex space-x-6">
             <Link
