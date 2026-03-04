@@ -63,7 +63,7 @@ const WorkSection: React.FC = () => {
               </Link>
             </strong>. <br /><br />
             <Link
-              href="/resumes.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-500 hover:underline"
