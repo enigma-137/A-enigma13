@@ -162,7 +162,7 @@ export default function Portfolio() {
         </div>
         <h3 className="text-base font-bold mt-9 mb-6">Featured Projects.</h3>
         <p className='text-xs italic'>swipe cards</p>
-        <FeaturedProjects projects={featuredProjects} />
+        {/* <FeaturedProjects projects={featuredProjects} /> */}
 
 
         <div className='py-2'>
