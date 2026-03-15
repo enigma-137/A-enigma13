@@ -149,10 +149,10 @@ export default function Portfolio() {
 
         <div className="text-left mb-6">
           <h2 className="text-lg font-bold mb-2">
-            Hello, I am <span className="animate-pulse">Emmanuel Onoja.</span>
+            Hello, I am <span className="animate-pulse">Emma Nuel.</span>
           </h2>
           <p className="text-sm font-sans">
-            A dedicated Software Engineer specializing in Rust, AI, and blockchain technologies. I focus on building reliable systems that scale, integrating innovative solutions to solve complex problems with precision and efficiency.
+            I am actively working towards becoming a dedicated Software Engineer specializing in Rust, AI, and blockchain technologies. I focus on building reliable systems that scale, integrating innovative solutions to solve complex problems with precision and efficiency.
           </p>
         </div>
 
@@ -169,7 +169,7 @@ export default function Portfolio() {
             Connect.
           </h2>
           <p className="text-sm leading-relaxed mb-4 font-sans">
-            Find me on:
+            Connect with me on professional platforms:
           </p>
           <div className="flex space-x-6">
             <Link

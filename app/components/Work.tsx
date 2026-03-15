@@ -50,7 +50,7 @@ const WorkSection: React.FC = () => {
             />
           ) : ( */}
           <>
-            Software Engineer with expertise in <strong>Rust, AI, and Automation</strong>.
+            Software Engineer with growing interest in <strong>Rust, AI, and Automation</strong>.
             I design and develop scalable systems and innovative tools to address real-world challenges. <br /><br />
             Currently leading the development of <strong>
               <Link
