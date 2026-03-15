@@ -50,9 +50,9 @@ const WorkSection: React.FC = () => {
             />
           ) : ( */}
           <>
-            Software Engineer focused on <strong>Rust, AI, and Automation</strong>.
-            I build systems that scale and tools that solve problems. <br /><br />
-            Currently building <strong>
+            Software Engineer with expertise in <strong>Rust, AI, and Automation</strong>.
+            I design and develop scalable systems and innovative tools to address real-world challenges. <br /><br />
+            Currently leading the development of <strong>
               <Link
                 href="https://nuwellai.com"
                 target="_blank"
@@ -61,7 +61,7 @@ const WorkSection: React.FC = () => {
               >
                 NuWell AI
               </Link>
-            </strong>. <br /><br />
+            </strong>, an AI-powered nutrition platform. <br /><br />
             <Link
               href="/resume.pdf"
               target="_blank"
