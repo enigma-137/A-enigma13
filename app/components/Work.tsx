@@ -55,7 +55,15 @@ const WorkSection: React.FC = () => {
 
             I have experience developing and maintaining management platforms, and I’ve collaborated with teams across both Web2 and Web3 environments. I enjoy working on systems-level challenges and creating solutions that are efficient, reliable, and easy to scale.
 
-            I also build tools and experimental apps in my spare time, many of which you can explore on my GitHub.
+            I also build tools and experimental apps in my spare time, many of which you can explore on my <Link
+              href="https://github.com/enigma-137"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-500 hover:underline"
+            >
+              GitHub
+            </Link>.
+            <br />
 
             If you’re working on something interesting, need my services or facing a problem worth solving, feel free to reach out. <br /><br />
             Currently leading the development of <strong>
