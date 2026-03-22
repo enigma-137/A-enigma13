@@ -51,7 +51,7 @@ const WorkSection: React.FC = () => {
           ) : ( */}
           <>
             Software Engineer with growing interest in <strong>Rust, AI, and Automation</strong>.
-            I design and develop scalable systems and innovative tools to address real-world challenges. <br /><br />
+            I design and develop scalable systems and innovative tools to address real-world challenges. I have experience building and maintaining full hospital, work, school, and market management platforms, and I am open for gigs involving such projects. <br /><br />
             Currently leading the development of <strong>
               <Link
                 href="https://nuwellai.com"
