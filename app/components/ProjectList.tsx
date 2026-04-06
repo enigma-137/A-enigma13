@@ -10,7 +10,7 @@ interface Project {
   link: string;
   description: string;
   image?: string;
-  users?: string;
+  users?: string | null;
 }
 
 interface ProjectListProps {
@@ -51,21 +51,21 @@ export function ProjectList({ projects }: ProjectListProps) {
                   {projectNumber}
                 </span>
                 <div className="flex flex-col gap-1">
-                    <span className="text-[10px] font-mono tracking-widest text-muted-foreground uppercase">
-                        {projectSlug}
+                  <span className="text-[10px] font-mono tracking-widest text-muted-foreground uppercase">
+                    {projectSlug}
+                  </span>
+                  {project.users && (
+                    <span className="text-[10px] font-mono text-primary/60 italic">
+                      {project.users} reached
                     </span>
-                    {project.users && (
-                        <span className="text-[10px] font-mono text-primary/60 italic">
-                            {project.users} reached
-                        </span>
-                    )}
+                  )}
                 </div>
               </div>
 
               {/* Content */}
               <div className="flex-1 space-y-4">
-                <Link 
-                  href={project.link} 
+                <Link
+                  href={project.link}
                   target={project.link.startsWith('http') ? "_blank" : "_self"}
                   className="inline-flex items-center gap-3 group/link"
                 >
@@ -84,7 +84,7 @@ export function ProjectList({ projects }: ProjectListProps) {
                 </div>
               </div>
             </div>
-            
+
             {/* Subtle background glow on hover */}
             <div className="absolute -inset-x-8 -inset-y-8 bg-primary/5 opacity-0 group-hover:opacity-100 rounded-3xl blur-2xl -z-10 transition-opacity duration-700 pointer-events-none" />
           </motion.div>

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 interface Project {
   name: string;
-  users: string;
+  users: string | null;
   stars: number;
   link: string;
   image: string;
@@ -27,7 +27,7 @@ export default function Portfolio() {
   const featuredProjects: Project[] = [
     {
       name: "C-Radar",
-      users: '',
+      users: null,
       stars: 0,
       link: "https://github.com/enigma-137/c-radar",
       image: "/projects/c-radar.png",
@@ -43,7 +43,7 @@ export default function Portfolio() {
     },
     {
       name: "Log Analyzer",
-      users: " ",
+      users: null,
       stars: 0,
       link: "https://github.com/enigma-137/log-analyzer",
       image: "/projects/log.png",
@@ -51,7 +51,7 @@ export default function Portfolio() {
     },
     {
       name: "Solana-X",
-      users: " ",
+      users: null,
       stars: 0,
       link: "https://github.com/enigma-137/solana-x",
       image: "/projects/solana.png",
@@ -59,7 +59,7 @@ export default function Portfolio() {
     },
     {
       name: "Image CDN",
-      users: " ",
+      users: null,
       stars: 2,
       link: "https://github.com/enigma-137/image-cdn",
       image: "/projects/cdn.png",
@@ -75,7 +75,7 @@ export default function Portfolio() {
     },
     {
       name: "Medimind",
-      users: " ",
+      users: null,
       stars: 0,
       link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
@@ -83,9 +83,9 @@ export default function Portfolio() {
     },
     {
       name: "JOJO AGENT X",
-      users: " ",
+      users: null,
       stars: 0,
-      link: "https://x.com/jojo_agent_x",
+      link: "https://x.com/jojo_exchange",
       image: "/projects/jojo-x.png",
       description: "An autonomous AI agent on X for real-time crypto updates, sentiment analysis, and market insights."
     },
