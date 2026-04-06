@@ -1,13 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import WorkSection from './components/Work';
 import { useTheme } from 'next-themes';
-import { Sun, Moon, Clock } from 'lucide-react';
-import { FeaturedProjects } from '@/components/featured-projects';
-import SkillsSection from './components/Skills';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Sun, Moon, ArrowRight, Dot } from 'lucide-react';
+import { ProjectList } from './components/ProjectList';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 interface Project {
@@ -20,24 +17,11 @@ interface Project {
 }
 
 export default function Portfolio() {
-  const [currentTime, setCurrentTime] = useState({ wat: '', gmt: '' });
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date();
-      setCurrentTime({
-        wat: now.toLocaleTimeString('en-NG', { timeZone: 'Africa/Lagos', hour: '2-digit', minute: '2-digit' }),
-        gmt: now.toLocaleTimeString('en-GB', { timeZone: 'GMT', hour: '2-digit', minute: '2-digit' }),
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
   }, []);
 
   const featuredProjects: Project[] = [
@@ -47,62 +31,31 @@ export default function Portfolio() {
       stars: 0,
       link: "https://nuwellai.com/",
       image: "/projects/nuwell.png",
-      description:
-        "AI-powered nutrition app with food recognition, meal recommendations, and calorie tracking for healthier eating habits."
+      description: "AI-powered nutrition app with food recognition, meal recommendations, and calorie tracking for healthier eating habits."
     },
     {
       name: "Medimind",
-      users: "",
+      users: "B2B Health",
       stars: 0,
       link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
-      description:
-        "Multi-tenant healthcare platform connecting hospitals, doctors, and patients with appointment scheduling and record management."
-    },
-    {
-      name: "Awaclinic",
-      users: "",
-      stars: 0,
-      link: "https://awaclinic.vercel.app/",
-      image: "/projects/awaclinic.png",
-      description:
-        "Multilingual voice-powered health assistant using speech recognition for accessible medical guidance in native languages."
-    },
-    {
-      name: "Type Race",
-      users: "~150",
-      stars: 2,
-      link: "https://typespace.pxxl.click",
-      image: "/projects/typerace.png",
-      description:
-        "Multiplayer typing speed test with real-time leaderboards."
+      description: "Multi-tenant healthcare platform connecting hospitals, doctors, and patients with appointment scheduling and record management."
     },
     {
       name: "JOJO AGENT X",
-      users: "",
+      users: "500+",
       stars: 0,
       link: "https://x.com/jojo_agent_x",
       image: "/projects/jojo-x.png",
-      description:
-        "An autonomous AI agent on X for real time crypto updates and insights."
+      description: "An autonomous AI agent on X for real time crypto updates and insights."
     },
     {
-      name: "Ghost followers and X circle",
-      users: "",
+      name: "Awaclinic",
+      users: "Voice AI",
       stars: 0,
-      link: "https://twitter0-apps.vercel.app/",
-      image: "/projects/ghost.png",
-      description:
-        "Identify ghost followers and manage social circles for enhanced engagement."
-    },
-    {
-      name: "FST-Cloud",
-      users: "345+",
-      stars: 2,
-      link: "/#",
-      image: "/projects/cloud.png",
-      description:
-        "Academic material sharing and organization platform for students."
+      link: "https://awaclinic.vercel.app/",
+      image: "/projects/awaclinic.png",
+      description: "Multilingual voice-powered health assistant using speech recognition for accessible medical guidance in native languages."
     },
     {
       name: "GitHub worth",
@@ -110,100 +63,134 @@ export default function Portfolio() {
       stars: 7,
       link: "https://github-worth.pxxl.click/",
       image: "/projects/github-worth.png",
-      description:
-        "Evaluate GitHub repository value based on key metrics."
+      description: "Evaluate GitHub repository value based on key metrics."
+    },
+    {
+      name: "Type Race",
+      users: "~150",
+      stars: 2,
+      link: "https://typespace.pxxl.click",
+      image: "/projects/typerace.png",
+      description: "Multiplayer typing speed test with real-time leaderboards."
     },
   ];
-
-
 
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <p className='text-sm p-4'><Clock className='h-4 w-4 inline' />  {currentTime.wat} WAT</p>
-      <div className="w-full max-w-4xl px-4 py-8 mx-auto relative">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
 
-        <button
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-          className="absolute top-4 right-4 p-2 rounded-full border-2 border-border hover:bg-accent transition-colors"
-          aria-label="Toggle theme"
-        >
-          {theme === 'light' ? <Moon className="w-6 h-6" /> : <Sun className="w-6 h-6" />}
-        </button>
-
-
-
-
-        <div className="flex items-center mb-8">
-          <Image
-            src="/5987562050374715409.jpg"
-            alt="Profile"
-            width={80}
-            height={80}
-            className="rounded-full border-4 border-border"
-          />
-
+      {/* Top Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-background/50 border-b border-border/10">
+        <div className="flex items-center gap-4">
+          <span className="text-[10px] font-mono tracking-widest text-muted-foreground uppercase opacity-50">Portfolio v3.0</span>
         </div>
-
-
-        <div className="text-left mb-6">
-          <h2 className="text-lg font-bold mb-2">
-            Hello, I am <span className="animate-pulse">Emma Nuel.</span>
-          </h2>
-          <p className="text-sm font-sans">
-            I am actively working towards becoming a dedicated Software Engineer specializing in Rust and AI. I focus on building reliable systems that scale, integrating innovative solutions to solve complex problems with precision and efficiency.
-          </p>
+        <div className="flex items-center gap-8">
+          <Link href="/about" className="text-xs font-mono tracking-widest hover:text-primary transition-colors uppercase">
+            About
+          </Link>
+          <button
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            className="group relative p-2 transition-all duration-300 active:scale-90"
+            aria-label="Toggle theme"
+          >
+            <div className="absolute inset-0 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
+            <AnimatePresence mode="wait">
+              {theme === 'light' ? (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon className="w-4 h-4 relative z-10" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun className="w-4 h-4 relative z-10" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
         </div>
+      </nav>
 
-        <div className=''>
-          <WorkSection />
-        </div>
-        {/* <h3 className="text-base font-bold mt-9 mb-6">Featured Projects.</h3>
-        <p className='text-xs italic'>swipe cards</p> */}
-        {/* <FeaturedProjects projects={featuredProjects} /> */}
+      <div className="w-full max-w-6xl px-6 md:px-12 py-32 mx-auto">
 
+        {/* Hero Section */}
+        <header className="mb-48 flex flex-col md:flex-row justify-between items-end gap-12">
+          <div className="order-2 md:order-1">
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-6xl md:text-[120px] font-serif font-black leading-[0.8] mb-8 tracking-tighter"
+            >
+              Emmanuel <br />
+              <span className="text-muted-foreground/30 ml-4 md:ml-12">Onoja.</span>
+            </motion.h1>
 
-        <div className='py-2'>
-          <h2 className="text-lg font-bold">
-            Connect.
-          </h2>
-          <p className="text-sm leading-relaxed mb-4 font-sans">
-            Connect with me on professional platforms:
-          </p>
-          <div className="flex space-x-6">
-            <Link
-              href="https://x.com/nigmaQx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sky-500 hover:text-white"
-            >
-              <Twitter size={24} />
-            </Link>
-            <Link
-              href="https://github.com/enigma-137"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sky-500 hover:text-white"
-            >
-              <Github size={24} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/emmanuel-onoja-22b7a51a7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sky-500 hover:text-white"
-            >
-              <Linkedin size={24} />
-            </Link>
+            <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs font-mono tracking-[0.2em] text-muted-foreground uppercase py-4 border-y border-border/10">
+              <Link href="https://github.com/enigma-137" target="_blank" className="hover:text-primary transition-colors tracking-widest">Github</Link>
+              <Link href="mailto:emmanuelonoja@gmail.com" className="hover:text-primary transition-colors tracking-widest">Email</Link>
+              <Link href="https://x.com/nigmaQx" target="_blank" className="hover:text-primary transition-colors tracking-widest">Twitter</Link>
+            </div>
           </div>
-        </div>
-        <div className='mb-4'>
-          <SkillsSection />
-        </div>
 
+          <div className="order-1 md:order-2 self-start flex flex-col items-end text-right">
+            <div className="flex items-center gap-2 text-primary font-mono text-[10px] uppercase mb-4 tracking-[0.3em]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              Online
+            </div>
+            <h2 className="text-xl md:text-2xl font-serif max-w-[280px] leading-snug">
+              Software Engineer specializing in <span className="italic">AI-Systems</span> and <span className="italic">Architectures</span>.
+            </h2>
+          </div>
+        </header>
+
+        {/* Section Label */}
+        {/* <div className="mb-24 flex items-center gap-8">
+          <h3 className="text-[10px] font-mono tracking-[0.5em] text-muted-foreground uppercase rotate-180 [writing-mode:vertical-lr]">Selected Work</h3>
+          <div className="h-px bg-border/20 flex-1" />
+        </div> */}
+
+        {/* Projects List */}
+        <section className="relative">
+          <div className="flex items-center gap-2 text-primary font-mono text-[10px] uppercase mb-4 tracking-[0.3em]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <p className='text-2xl'>Projects</p>
+          </div>
+          <ProjectList projects={featuredProjects} />
+
+          {/* Background Decorative Text */}
+          <div className="hidden lg:block absolute -right-24 top-0 opacity-[0.02] -z-10 select-none">
+            <span className="text-[200px] font-serif font-black [writing-mode:vertical-lr] tracking-tighter">
+              ENIGMA
+            </span>
+          </div>
+        </section>
+
+        {/* Footer Link */}
+        <footer className="mt-48 pt-12 border-t border-border/10 flex flex-col md:flex-row justify-between items-center gap-8 group">
+          {/* <Link href="/about" className="flex items-center gap-4 text-3xl font-serif font-light hover:gap-8 transition-all duration-500">
+            Wanna see the full journey? <span className="italic text-muted-foreground group-hover:text-primary transition-colors">Start here.</span> <ArrowRight className="h-8 w-8" />
+          </Link> */}
+          <div className="text-[10px] font-mono text-muted-foreground/40 uppercase tracking-widest">© {new Date().getFullYear()} ENIGMA.</div>
+        </footer>
       </div>
-
 
     </div>
   );
