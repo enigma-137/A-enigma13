@@ -26,6 +26,14 @@ export default function Portfolio() {
 
   const featuredProjects: Project[] = [
     {
+      name: "C-Radar",
+      users: '',
+      stars: 0,
+      link: "https://github.com/enigma-137/c-radar",
+      image: "/projects/c-radar.png",
+      description: "High-performance Rust & TypeScript cryptocurrency dashboard with real-time market insights and an AI-powered chat assistant."
+    },
+    {
       name: "Nuwell AI",
       users: "700+",
       stars: 0,
@@ -34,44 +42,52 @@ export default function Portfolio() {
       description: "AI-powered nutrition app with food recognition, meal recommendations, and calorie tracking for healthier eating habits."
     },
     {
+      name: "Log Analyzer",
+      users: " ",
+      stars: 0,
+      link: "https://github.com/enigma-137/log-analyzer",
+      image: "/projects/log.png",
+      description: "Parallel-processed Rust CLI for deep server log analysis, supporting Nginx, Apache, and custom regex-based parsing."
+    },
+    {
+      name: "Solana-X",
+      users: " ",
+      stars: 0,
+      link: "https://github.com/enigma-137/solana-x",
+      image: "/projects/solana.png",
+      description: "Solana-based content creation engine that generates tweet ideas from external links using automated insights."
+    },
+    {
+      name: "Image CDN",
+      users: " ",
+      stars: 2,
+      link: "https://github.com/enigma-137/image-cdn",
+      image: "/projects/cdn.png",
+      description: "Streamlined Rust command-line utility for lightning-fast image uploads and Cloudinary CDN management."
+    },
+    {
+      name: "GitHub Worth",
+      users: "3K+",
+      stars: 7,
+      link: "https://github.com/enigma-137/github-worth",
+      image: "/projects/github-worth.png",
+      description: "Analytical platform to evaluate GitHub repository value and impact based on key development metrics."
+    },
+    {
       name: "Medimind",
-      users: "B2B Health",
+      users: " ",
       stars: 0,
       link: "https://smartremii-health.netlify.app/",
       image: "/projects/medimind.png",
-      description: "Multi-tenant healthcare platform connecting hospitals, doctors, and patients with appointment scheduling and record management."
+      description: "Multi-tenant healthcare platform connecting hospitals and doctors with advanced appointment scheduling."
     },
     {
       name: "JOJO AGENT X",
-      users: "500+",
+      users: " ",
       stars: 0,
       link: "https://x.com/jojo_agent_x",
       image: "/projects/jojo-x.png",
-      description: "An autonomous AI agent on X for real time crypto updates and insights."
-    },
-    {
-      name: "Awaclinic",
-      users: "Voice AI",
-      stars: 0,
-      link: "https://awaclinic.vercel.app/",
-      image: "/projects/awaclinic.png",
-      description: "Multilingual voice-powered health assistant using speech recognition for accessible medical guidance in native languages."
-    },
-    {
-      name: "GitHub worth",
-      users: "3K+",
-      stars: 7,
-      link: "https://github-worth.pxxl.click/",
-      image: "/projects/github-worth.png",
-      description: "Evaluate GitHub repository value based on key metrics."
-    },
-    {
-      name: "Type Race",
-      users: "~150",
-      stars: 2,
-      link: "https://typespace.pxxl.click",
-      image: "/projects/typerace.png",
-      description: "Multiplayer typing speed test with real-time leaderboards."
+      description: "An autonomous AI agent on X for real-time crypto updates, sentiment analysis, and market insights."
     },
   ];
 
