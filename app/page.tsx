@@ -169,7 +169,7 @@ export default function Portfolio() {
               Online
             </div>
             <h2 className="text-xl md:text-2xl font-serif max-w-[280px] leading-snug">
-              Software Engineer specializing in <span className="italic">AI-Systems</span> and <span className="italic">Architectures</span>.
+              Software Engineer.
             </h2>
           </div>
         </header>
