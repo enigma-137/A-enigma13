@@ -50,6 +50,14 @@ export default function Portfolio() {
       description: "Parallel-processed Rust CLI for deep server log analysis, supporting Nginx, Apache, and custom regex-based parsing."
     },
     {
+      name: "Agentic CLI memory system",
+      users: null,
+      stars: 2,
+      link: "https://github.com/enigma-137/cli-agent-memory",
+      image: "/projects/solana.png",
+      description: "A semantic memory system built with Rust and Google's Gemini API. Store memories with semantic embeddings and retrieve them contextually when asking questions.."
+    },
+    {
       name: "Solana-X",
       users: null,
       stars: 0,
@@ -74,12 +82,12 @@ export default function Portfolio() {
       description: "Analytical platform to evaluate GitHub repository value and impact based on key development metrics."
     },
     {
-      name: "Medimind",
+      name: "IT-Radar",
       users: null,
       stars: 0,
-      link: "https://smartremii-health.netlify.app/",
-      image: "/projects/medimind.png",
-      description: "Multi-tenant healthcare platform connecting hospitals and doctors with advanced appointment scheduling."
+      link: "https://it-radar.vercel.app/",
+      image: "/projects/it-radar.png",
+      description: "A centralized hub for engineering and IT students to locate approved industrial training placements."
     },
     {
       name: "JOJO AGENT X",
